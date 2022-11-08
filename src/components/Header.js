@@ -5,11 +5,11 @@ const Header = () => {
     // change header on scroll
     const changeHeader = () => {
       if(window.scrollY){
-        // document.querySelector('header .wrapper').style.paddingBlock = ".5rem"
+        document.querySelector('header .wrapper').style.paddingBlock = ".5rem"
         document.querySelector('header .wrapper').style.borderBottomColor = "rgba(0, 0, 0, .1)"
       }
       else{
-        // document.querySelector('header .wrapper').style.paddingBlock = "1rem"
+        document.querySelector('header .wrapper').style.paddingBlock = "1rem"
         document.querySelector('header .wrapper').style.borderBottomColor = "transparent"
       }
     }
