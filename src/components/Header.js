@@ -20,7 +20,7 @@ const Header = () => {
       if(document.querySelector('header input').checked){
         document.body.style.overflow = "hidden"
         setTimeout(()=>{
-          // document.querySelector('header .wrapper').style.paddingBlock = "1rem"
+          document.querySelector('header .wrapper').style.paddingBlock = "1rem"
           document.querySelector('header .wrapper').style.borderBottomColor = "transparent"
         }, 1)
       }
