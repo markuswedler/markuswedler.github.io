@@ -69,7 +69,7 @@ p {
 .btn.outline {
   background: none;
   color: #232323;
-  border: 0.125rem solid #232323;
+  border: 0.0625rem solid #a3a3a3;
 }
 
 .wrapper {
