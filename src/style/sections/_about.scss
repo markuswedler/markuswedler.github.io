@@ -44,7 +44,9 @@ section.about{
       div{
         position: relative;
         height: 10px;
-        background: lighten($main, 80);
+        // background: lighten($main, 80);
+        border: .125rem solid $main; ////
+        border-radius: .125rem; ////
         margin-block-start: .375rem;
         &::before{
           content: '';
