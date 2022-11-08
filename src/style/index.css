@@ -20,7 +20,12 @@ body {
   font-family: "Archivo", sans-serif;
 }
 
+ul {
+  list-style: none;
+}
+
 a {
+  text-decoration: none;
   color: #232323;
 }
 
@@ -28,14 +33,42 @@ a {
   font-family: "Rubik", sans-serif;
 }
 
-ul {
-  list-style: none;
+h1 {
+  font-size: 1.625rem;
+}
+
+.title {
+  text-align: center;
+  line-height: 2.14;
+  padding-block: 9rem;
+}
+
+p {
+  color: #4d4d4d;
+  line-height: 1.625;
 }
 
 .logo {
   text-decoration: none;
   font-weight: 700;
   font-size: 1.25rem;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #232323;
+  border-radius: 0.25rem;
+  font-weight: 700;
+  color: #fff;
+  padding-block: 1rem;
+  padding-inline: 2rem;
+}
+.btn.outline {
+  background: none;
+  color: #232323;
+  border: 1px solid #a3a3a3;
 }
 
 .wrapper {
@@ -46,6 +79,8 @@ ul {
 }
 
 header {
+  position: relative;
+  z-index: 999;
   background: #fff;
   position: fixed;
   top: 0;
@@ -96,7 +131,6 @@ header > .wrapper nav ul li {
   justify-content: center;
 }
 header > .wrapper nav ul li a {
-  text-decoration: none;
   display: block;
   padding-block: 0.75rem;
 }
@@ -110,7 +144,6 @@ header > .wrapper input:checked ~ nav {
 header > .wrapper .lang-switch {
   visibility: hidden;
   opacity: 0;
-  text-decoration: none;
   font-size: 0.7rem;
   font-weight: 600;
   transition: 0.2s;
@@ -154,6 +187,145 @@ header > .wrapper input:checked ~ label::after {
   transform: rotate(-45deg);
 }
 
+section.about {
+  scroll-margin: 100vmax;
+}
+section.about .pfp {
+  width: 100%;
+  aspect-ratio: 1/1;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: grayscale(100%) brightness(135%);
+  position: relative;
+  z-index: -1;
+  -webkit-margin-after: 2rem;
+          margin-block-end: 2rem;
+}
+section.about p {
+  -webkit-padding-before: 1.25rem;
+          padding-block-start: 1.25rem;
+}
+section.about ul {
+  display: grid;
+  gap: 1.25rem;
+  -webkit-padding-before: 2.5rem;
+          padding-block-start: 2.5rem;
+}
+section.about ul li {
+  position: relative;
+}
+section.about ul li span {
+  position: absolute;
+  bottom: 0.8125rem;
+  transform: translateX(-50%);
+  font-size: 0.7rem;
+  color: #fff;
+  background: #232323;
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+}
+section.about ul li span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  border: 0.1875rem solid transparent;
+  border-top-color: #232323;
+}
+section.about ul li div {
+  position: relative;
+  height: 10px;
+  background: #efefef;
+  -webkit-margin-before: 0.375rem;
+          margin-block-start: 0.375rem;
+}
+section.about ul li div::before {
+  content: "";
+  position: absolute;
+  background: #232323;
+  height: 100%;
+}
+section.about ul li:nth-child(1) span {
+  left: 97%;
+}
+section.about ul li:nth-child(1) span::before {
+  content: "97%";
+}
+section.about ul li:nth-child(1) div::before {
+  width: 97%;
+}
+section.about ul li:nth-child(2) span {
+  left: 98%;
+}
+section.about ul li:nth-child(2) span::before {
+  content: "98%";
+}
+section.about ul li:nth-child(2) div::before {
+  width: 98%;
+}
+section.about ul li:nth-child(3) span {
+  left: 56%;
+}
+section.about ul li:nth-child(3) span::before {
+  content: "56%";
+}
+section.about ul li:nth-child(3) div::before {
+  width: 56%;
+}
+section.about ul li:nth-child(4) span {
+  left: 76%;
+}
+section.about ul li:nth-child(4) span::before {
+  content: "76%";
+}
+section.about ul li:nth-child(4) div::before {
+  width: 76%;
+}
+
+section.works .works {
+  display: grid;
+  gap: 2.25rem;
+}
+section.works .works a {
+  display: block;
+  text-align: center;
+  padding-block: 0.75rem;
+  margin-block: -0.75rem;
+}
+section.works .works a .img {
+  width: 100%;
+  aspect-ratio: 3/1;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+section.works .works a h3 {
+  -webkit-margin-before: 1.5rem;
+          margin-block-start: 1.5rem;
+}
+section.works .works a p {
+  -webkit-margin-before: 1rem;
+          margin-block-start: 1rem;
+}
+section.works .btn {
+  -webkit-margin-before: 2.25rem;
+          margin-block-start: 2.25rem;
+}
+
+section.contact .email {
+  font-weight: 700;
+}
+section.contact h4 {
+  -webkit-margin-before: 1.25rem;
+          margin-block-start: 1.25rem;
+}
+section.contact div {
+  display: flex;
+  gap: 0.5rem;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -161,5 +333,21 @@ header > .wrapper input:checked ~ label::after {
 }
 
 body {
-  height: 200vh;
+  cursor: default;
+  scroll-behavior: smooth;
+}
+
+main {
+  -webkit-padding-after: var(--wrapper-padding);
+          padding-block-end: var(--wrapper-padding);
+}
+
+::-moz-selection {
+  background: #232323;
+  color: #fff;
+}
+
+::selection {
+  background: #232323;
+  color: #fff;
 }/*# sourceMappingURL=index.css.map */

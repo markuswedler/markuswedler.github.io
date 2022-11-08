@@ -2,14 +2,30 @@ body{
   font-family: "Archivo", sans-serif;
 }
 
+
+ul{
+  list-style: none;
+}
+
+
 a{
+  text-decoration: none;
   color: $main;
 }
 
 .logo, h1, h2, h3, h4, h5, h6{
   font-family: "Rubik", sans-serif;
 }
+h1{
+  font-size: 1.625rem;
+}
+.title{
+  text-align: center;
+  line-height: 2.14;
+  padding-block: 9rem;
+}
 
-ul{
-  list-style: none;
+p{
+  color: $text;
+  line-height: 1.625;
 }

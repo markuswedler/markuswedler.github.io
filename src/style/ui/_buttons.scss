@@ -1,0 +1,16 @@
+.btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $main;
+  border-radius: 0.25rem;
+  font-weight: 700;
+  color: #fff;
+  padding-block: 1rem;
+  padding-inline: 2rem;
+  &.outline{
+    background: none;
+    color: $main;
+    border: 1px solid #a3a3a3;
+  }
+}

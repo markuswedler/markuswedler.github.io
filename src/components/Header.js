@@ -3,8 +3,8 @@ import { useEffect } from "react"
 const Header = () => {
   useEffect(()=>{
     // change header on scroll
-    window.addEventListener("scroll", ()=>{
-      if(window.scrollY > 10){
+    const changeHeader = () => {
+      if(window.scrollY){
         document.querySelector('header .wrapper').style.paddingBlock = ".5rem"
         document.querySelector('header .wrapper').style.borderBottomColor = "rgba(0, 0, 0, .1)"
       }
@@ -12,19 +12,29 @@ const Header = () => {
         document.querySelector('header .wrapper').style.paddingBlock = "1rem"
         document.querySelector('header .wrapper').style.borderBottomColor = "transparent"
       }
-    })
+    }
+    window.addEventListener("scroll", changeHeader)
+    changeHeader()
     // prevent body scroll when menu is opened (mobile)
     document.querySelector('header input').addEventListener("change", ()=>{
       if(document.querySelector('header input').checked){
         document.body.style.overflow = "hidden"
-        document.querySelector('header .wrapper').style.paddingBlock = "1rem"
-        document.querySelector('header .wrapper').style.borderBottomColor = "transparent"
+        setTimeout(()=>{
+          document.querySelector('header .wrapper').style.paddingBlock = "1rem"
+          document.querySelector('header .wrapper').style.borderBottomColor = "transparent"
+        }, 1)
       }
       else{
         document.body.style.overflow = "unset"
-        document.querySelector('header .wrapper').style.paddingBlock = ".5rem"
-        document.querySelector('header .wrapper').style.borderBottomColor = "rgba(0, 0, 0, .1)"
+        changeHeader()
       }
+    })
+    // close menu on link click
+    document.querySelectorAll('header nav a').forEach(link => {
+      link.addEventListener("click", ()=>{
+        document.querySelector('header input').checked = false
+        document.body.style.overflow = "unset"
+      })
     })
   }, [])
 
@@ -41,7 +51,7 @@ const Header = () => {
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
-        <a href="#" className="lang-switch">EN<span>/RU</span></a>
+        <a href="/" className="lang-switch">EN<span>/RU</span></a>
         <label htmlFor="menuBtn"/>
       </div>
     </header>

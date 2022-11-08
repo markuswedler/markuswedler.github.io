@@ -1,0 +1,79 @@
+section.about{
+  scroll-margin: 100vmax;
+
+  .pfp{
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%) brightness(135%);
+    position: relative;
+    z-index: -1;
+    margin-block-end: 2rem;
+  }
+
+  p{
+    padding-block-start: 1.25rem;
+  }
+
+  ul{
+    display: grid;
+    gap: 1.25rem;
+    padding-block-start: 2.5rem;
+    li{
+      position: relative;
+      span{
+        position: absolute;
+        bottom: 0.8125rem;
+        transform: translateX(-50%);
+        font-size: .7rem;
+        color: #fff;
+        background: $main;
+        border-radius: .2rem;
+        padding: .5rem;
+        &::after{
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translate(-50%, 100%);
+          border: 0.1875rem solid transparent;
+          border-top-color: $main;
+        }
+      }
+      div{
+        position: relative;
+        height: 10px;
+        background: lighten($main, 80);
+        margin-block-start: .375rem;
+        &::before{
+          content: '';
+          position: absolute;
+          background: $main;
+          height: 100%;
+        }
+      }
+      &:nth-child(1){
+        span{ left: 97%; }
+        span::before{ content: '97%'; }
+        div::before{ width: 97%; }
+      }
+      &:nth-child(2){
+        span{ left: 98%; }
+        span::before{ content: '98%'; }
+        div::before{ width: 98%; }
+      }
+      &:nth-child(3){
+        span{ left: 56%; }
+        span::before{ content: '56%'; }
+        div::before{ width: 56%; }
+      }
+      &:nth-child(4){
+        span{ left: 76%; }
+        span::before{ content: '76%'; }
+        div::before{ width: 76%; }
+      }
+    }
+  }
+}

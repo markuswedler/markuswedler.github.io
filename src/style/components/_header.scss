@@ -1,4 +1,6 @@
 header{
+  position: relative;
+  z-index: 999;
   background: #fff;
   position: fixed;
   top: 0;
@@ -48,7 +50,6 @@ header{
           display: flex;
           justify-content: center;
           a{
-            text-decoration: none;
             display: block;
             padding-block: .75rem;
             &:hover{
@@ -67,7 +68,6 @@ header{
     .lang-switch{
       visibility: hidden;
       opacity: 0;
-      text-decoration: none;
       font-size: .7rem;
       font-weight: 600;
       transition: $transition;
