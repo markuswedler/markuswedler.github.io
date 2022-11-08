@@ -196,6 +196,8 @@ section.about .pfp {
   filter: grayscale(100%) brightness(135%);
   position: relative;
   z-index: -1;
+  -webkit-margin-before: 2rem;
+          margin-block-start: 2rem;
   -webkit-margin-after: 2rem;
           margin-block-end: 2rem;
 }
