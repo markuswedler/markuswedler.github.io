@@ -1,0 +1,109 @@
+header{
+  background: #fff;
+  position: fixed;
+  top: 0;
+
+  & > .wrapper{
+    display: flex;
+    align-items: stretch;
+    border-bottom: 1px solid transparent;
+    transition: $transition;
+    padding-block: 1rem;
+    padding-inline: 0;
+
+    
+    // vertically center
+    & > *{
+      display: flex;
+      align-items: center;
+    }
+
+
+    input{ display: none; }
+
+
+    .logo{
+      padding-inline: .75rem;
+      margin-inline-start: -0.75rem;
+      margin-inline-end: auto;
+    }
+  
+
+    nav{
+      visibility: hidden;
+      opacity: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      background: #fff;
+      width: 100%;
+      height: stretch;
+      display: grid;
+      place-items: center;
+      transition: $transition;
+      ul{
+        padding: var(--wrapper-padding);
+        li{
+          display: flex;
+          justify-content: center;
+          a{
+            text-decoration: none;
+            display: block;
+            padding-block: .75rem;
+            &:hover{
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+    input:checked ~ nav{
+      visibility: visible;
+      opacity: 1;
+    }
+  
+
+    .lang-switch{
+      visibility: hidden;
+      opacity: 0;
+      text-decoration: none;
+      font-size: .7rem;
+      font-weight: 600;
+      transition: $transition;
+      padding-inline: .75rem;
+      span{
+        color: #bcbcbc;
+      }
+    }
+    input:checked ~ .lang-switch{
+      visibility: visible;
+      opacity: 1;
+    }
+  
+
+    label{
+      cursor: pointer;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+      margin-inline-end: -12px;
+      &::before, &::after{
+        content: '';
+        width: 18px;
+        height: 2.4px;
+        background: $main;
+        transition: $transition;
+      }
+      &::before{ margin-block-end: 6px; }
+    }
+    input:checked ~ label{
+      &::before{ margin-bottom: -2px; transform: rotate(45deg); }
+      &::after{ transform: rotate(-45deg); }
+    }
+  }
+}
