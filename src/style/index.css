@@ -133,7 +133,7 @@ header > .wrapper nav ul li {
 }
 header > .wrapper nav ul li a {
   display: block;
-  padding-block: 0.75rem;
+  padding: 0.75rem;
 }
 header > .wrapper nav ul li a:hover {
   text-decoration: underline;
