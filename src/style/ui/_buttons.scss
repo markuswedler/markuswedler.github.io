@@ -6,11 +6,13 @@
   border-radius: 0.25rem;
   font-weight: 700;
   color: #fff;
+  background: $primary;
   padding-block: 1rem;
   padding-inline: 2rem;
   &.outline{
     background: none;
     color: $main;
-    border: 1px solid #a3a3a3;
+    border: .125rem solid $main;
+    // border: .0625rem solid #a3a3a3;
   }
 }
