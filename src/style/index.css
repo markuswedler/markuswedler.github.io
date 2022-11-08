@@ -90,7 +90,7 @@ header > .wrapper {
   align-items: stretch;
   border-bottom: 1px solid transparent;
   transition: 0.2s;
-  padding-block: 1rem;
+  padding-block: 0.5rem;
   padding-inline: 0;
 }
 header > .wrapper > * {
@@ -187,9 +187,6 @@ header > .wrapper input:checked ~ label::after {
   transform: rotate(-45deg);
 }
 
-section.about {
-  scroll-margin: 100vmax;
-}
 section.about .pfp {
   width: 100%;
   aspect-ratio: 1/1;

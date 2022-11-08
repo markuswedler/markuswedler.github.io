@@ -6,6 +6,9 @@ import Header from "./components/Header"
 const App = () => {
   useEffect(()=>{
     document.querySelector('main').style.paddingBlockStart = document.querySelector('header').offsetHeight + "px"
+    document.querySelectorAll('section').forEach(section => {
+      section.style.scrollMargin = document.querySelector('header').offsetHeight + "px"
+    })
   }, [])
 
   return (
