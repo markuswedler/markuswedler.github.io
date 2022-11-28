@@ -49,7 +49,12 @@ const App = () => {
             <a href="https://amvtheatres.vercel.app">
               <div className="img"  style={{ backgroundImage: "url('/images/logos/amvtheatres.svg')" }}/>
               <h3>AMV Theatres</h3>
-              <p>Movie theatre website that was created for a univercity course project</p>
+              <p>Movie theatre website that was created for a univercity course&nbsp;project</p>
+            </a>
+            <a href="https://markuswedler.github.io/optic-shop">
+              <div className="img"  style={{ backgroundImage: "url('/images/logos/optic-shop.svg')" }}/>
+              <h3>Optic Shop</h3>
+              <p>Optic Shop's main page. Was inspired by its design while scrolling through&nbsp;Instagram</p>
             </a>
           </div>
           <a href="/" className="btn outline">All Works&nbsp;<ion-icon name="arrow-forward-outline"/></a>
