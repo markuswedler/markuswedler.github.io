@@ -1,21 +1,4 @@
 section.about{
-  .pfp{
-    width: 100%;
-    aspect-ratio: 1/1;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    filter: grayscale(100%) brightness(135%);
-    position: relative;
-    z-index: -1;
-    margin-block-start: 1.5rem;
-    margin-block-end: 2rem;
-  }
-
-  p{
-    padding-block-start: 1.25rem;
-  }
-
   ul{
     display: grid;
     gap: 1.25rem;

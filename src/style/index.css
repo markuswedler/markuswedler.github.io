@@ -188,7 +188,11 @@ header > .wrapper input:checked ~ label::after {
   transform: rotate(-45deg);
 }
 
-section.about .pfp {
+section.home {
+  -webkit-padding-before: 1.5rem;
+          padding-block-start: 1.5rem;
+}
+section.home .pfp {
   width: 100%;
   aspect-ratio: 1/1;
   background-size: contain;
@@ -197,15 +201,14 @@ section.about .pfp {
   filter: grayscale(100%) brightness(135%);
   position: relative;
   z-index: -1;
-  -webkit-margin-before: 1.5rem;
-          margin-block-start: 1.5rem;
   -webkit-margin-after: 2rem;
           margin-block-end: 2rem;
 }
-section.about p {
+section.home p {
   -webkit-padding-before: 1.25rem;
           padding-block-start: 1.25rem;
 }
+
 section.about ul {
   display: grid;
   gap: 1.25rem;

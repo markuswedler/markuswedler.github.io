@@ -5,7 +5,9 @@ import Header from "./components/Header"
 
 const App = () => {
   useEffect(()=>{
+    // set marginTop for main section
     document.querySelector('main').style.paddingBlockStart = document.querySelector('header').offsetHeight + "px"
+    // set links stops
     document.querySelectorAll('section').forEach(section => {
       section.style.scrollMargin = document.querySelector('header').offsetHeight + "px"
     })
@@ -15,10 +17,13 @@ const App = () => {
     <>
       <Header/>
       <main className="wrapper">
-        <section className="about" id="about">
+        <section className="home" id="home">
           <div className="pfp" style={{ backgroundImage: "url('/images/pfp.jpg')" }}/>
           <h1>Hi, I'm Sergei!</h1>
           <p><b>A web developer currently based in Vladivostok.</b> Though I'm still a studen, it doesn't stop me from realizing my dreams of being a professional web developer.</p>
+        </section>
+        <section className="about" id="about">
+          <h1 className="title">About</h1>
           <p>Loving playing with lego since childhood once I found out about web developing and understood that it's not just but much more than creating something from different shapes. This is how loving teamwork and helping people achieve their goals came just from loving playing with bricks.</p>
           <ul>
             <li>
