@@ -305,7 +305,6 @@ section.works .works a .img {
   background-position: center;
   background-repeat: no-repeat;
   margin-inline: auto;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 section.works .works a h3 {
   -webkit-margin-before: 1.5rem;
