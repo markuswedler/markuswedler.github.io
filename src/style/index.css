@@ -298,11 +298,14 @@ section.works .works a {
   margin-block: -0.75rem;
 }
 section.works .works a .img {
-  width: 100%;
-  aspect-ratio: 3/1;
+  aspect-ratio: 120/69;
+  height: 6.875rem;
+  border-radius: 0.9rem;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  margin-inline: auto;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 section.works .works a h3 {
   -webkit-margin-before: 1.5rem;
