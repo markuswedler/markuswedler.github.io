@@ -1,12 +1,17 @@
 section.works{
   .works{
+    @media (min-width: 426px){
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+    }
     display: grid;
     gap: 2.25rem;
     a{
       display: block;
       text-align: center;
-      padding-block: .75rem;
-      margin-block: -0.75rem;
+      padding-top: .75rem;
+      padding-bottom: .75rem;
+      margin-top: -0.75rem;
+      margin-bottom: -0.75rem;
       .img{
         aspect-ratio: 120/69;
         height: 6.875rem;
@@ -14,18 +19,19 @@ section.works{
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
-        margin-inline: auto;
+        margin-left: auto;
+        margin-right: auto;
       }
       h3{
-        margin-block-start: 1.5rem;
+        margin-top: 1.5rem;
       }
       p{
-        margin-block-start: 1rem;
+        margin-top: 1rem;
       }
     }
   }
 
   .btn{
-    margin-block-start: 2.25rem;
+    margin-top: 2.25rem;
   }
 }

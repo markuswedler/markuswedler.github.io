@@ -1,0 +1,53 @@
+section.hero{
+  @media (min-width: 426px){
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 0 2rem;
+    h1{
+      align-self: end;
+    }
+  }
+  @media (max-width: 426px){
+    padding-top: 1.5rem;
+  }
+  
+  .pfp{
+    @media (min-width: 426px){
+      align-self: center;
+      grid-row: 1/3;
+    }
+    @media (max-width: 426px){
+      margin-bottom: 2rem;
+    }
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%) brightness(135%);
+    position: relative;
+    z-index: -1;
+  }
+
+  p{
+    padding-top: 1.25rem;
+  }
+
+  .arrow-down{
+    @media (max-width: 426px){ display: none; }
+    position: absolute;
+    bottom: 5%;
+    transition: $transition;
+    @keyframes arrow_down{
+      from{ transform: translate(-50%, -10%); }
+      to{ transform: translate(-50%, 10%); }
+    }
+    animation: 1s arrow_down ease-out alternate infinite;
+    left: 50%;
+    ion-icon{
+      font-size: 2rem;
+    }
+  }
+}

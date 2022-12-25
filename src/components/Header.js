@@ -1,21 +1,16 @@
 import { useEffect } from "react"
 
 const Header = () => {
+  // change header on scroll
+  const changeHeader = () => {
+    if(window.scrollY) document.querySelector('header .wrapper').style.borderBottomColor = "rgba(0, 0, 0, .1)"
+    else document.querySelector('header .wrapper').style.borderBottomColor = "transparent"
+  }
+  
   useEffect(()=>{
-    // change header on scroll
-    const changeHeader = () => {
-      if(window.scrollY){
-        document.querySelector('header .wrapper').style.paddingBlock = ".5rem"
-        document.querySelector('header .wrapper').style.borderBottomColor = "rgba(0, 0, 0, .1)"
-      }
-      else{
-        document.querySelector('header .wrapper').style.paddingBlock = "1rem"
-        document.querySelector('header .wrapper').style.borderBottomColor = "transparent"
-      }
-    }
     window.addEventListener("scroll", changeHeader)
     changeHeader()
-    // prevent body scroll when menu is opened (mobile)
+    // prevent body scroll when menu is opened
     document.querySelector('header input').addEventListener("change", ()=>{
       if(document.querySelector('header input').checked){
         document.body.style.overflow = "hidden"

@@ -1,8 +1,16 @@
 section.about{
+  @media (min-width: 426px){
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 2rem;
+  }
+
   ul{
     display: grid;
     gap: 1.25rem;
-    padding-block-start: 2.5rem;
+    @media (max-width: 426px){
+      padding-top: 2.5rem;
+    }
     li{
       position: relative;
       span{
@@ -28,7 +36,7 @@ section.about{
         position: relative;
         height: 10px;
         background: lighten($main, 80);
-        margin-block-start: .375rem;
+        margin-top: .375rem;
         &::before{
           content: '';
           position: absolute;

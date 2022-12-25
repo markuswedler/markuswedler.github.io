@@ -4,15 +4,17 @@ header{
   background: #fff;
   position: fixed;
   top: 0;
+  @media (min-width: 426px){
+    left: 50%;
+    transform: translateX(-50%);
+  }
 
   & > .wrapper{
     display: flex;
     align-items: stretch;
     border-bottom: 1px solid transparent;
     transition: $transition;
-    padding-block: .5rem;
-    // padding-block: 1rem;
-    padding-inline: 0;
+    padding: .5rem 0;
 
     
     // vertically center
@@ -26,35 +28,45 @@ header{
 
 
     .logo{
-      padding-inline: .75rem;
-      margin-inline-start: -0.75rem;
-      margin-inline-end: auto;
+      padding-left: .75rem;
+      padding-right: .75rem;
+      margin-left: -0.75rem;
+      margin-right: auto;
     }
   
 
     nav{
-      visibility: hidden;
-      opacity: 0;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: -1;
-      background: #fff;
-      width: 100%;
-      height: stretch;
-      display: grid;
-      place-items: center;
-      transition: $transition;
+      @media (max-width: 426px){
+        visibility: hidden;
+        opacity: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background: #fff;
+        width: 100%;
+        height: stretch;
+        transition: $transition;
+      }
       ul{
-        padding: var(--wrapper-padding);
+        @media (max-width: 426px){
+          padding: var(--wrapper-padding);
+        }
+        @media (min-width: 426px){
+          display: flex;
+        }
         li{
           display: flex;
           justify-content: center;
           a{
-            display: block;
             padding: .75rem;
-            &:hover{
-              text-decoration: underline;
+            @media (min-width: 426px){
+              &:hover{
+                // border-bottom: .125rem solid $text;
+                // margin-bottom: -0.125rem;
+                // border-radius: .1rem;
+                transition: $transition;
+              }
             }
           }
         }
@@ -67,12 +79,15 @@ header{
   
 
     .lang-switch{
-      visibility: hidden;
-      opacity: 0;
+      @media (max-width: 426px){
+        visibility: hidden;
+        opacity: 0;
+      }
       font-size: .7rem;
       font-weight: 600;
       transition: $transition;
-      padding-inline: .75rem;
+      padding-left: .75rem;
+      padding-right: .75rem;
       span{
         color: #bcbcbc;
       }
@@ -84,6 +99,9 @@ header{
   
 
     label{
+      @media (min-width: 426px){
+        display: none;
+      }
       cursor: pointer;
       width: 48px;
       height: 48px;
@@ -92,7 +110,7 @@ header{
       align-items: center;
       justify-content: center;
       padding: 12px;
-      margin-inline-end: -12px;
+      margin-right: -12px;
       &::before, &::after{
         content: '';
         width: 18px;
@@ -100,7 +118,7 @@ header{
         background: $main;
         transition: $transition;
       }
-      &::before{ margin-block-end: 6px; }
+      &::before{ margin-bottom: 6px; }
     }
     input:checked ~ label{
       &::before{ margin-bottom: -2px; transform: rotate(45deg); }

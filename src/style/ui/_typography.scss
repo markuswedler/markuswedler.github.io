@@ -22,7 +22,16 @@ h1{
 .title{
   text-align: center;
   line-height: 2.14;
-  padding-block: 9rem;
+  padding-top: 9rem;
+  padding-bottom: 9rem;
+  // @media (max-width: 426px){
+  //   
+  // }
+  @media (min-width: 426px){
+    grid-column: 3/1;
+    // padding-top: 2rem;
+    // padding-bottom: 1rem;
+  }
 }
 
 p{
