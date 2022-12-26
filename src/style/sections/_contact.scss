@@ -1,13 +1,8 @@
 section.contact{
+  // border-top: .0625rem solid rgb(#000, .1);
+  padding-left: 0;
+  padding-right: 0;
   .email{
     font-weight: 700;
-  }
-
-  h4{
-    margin-top: 1.25rem;
-  }
-  div{
-    display: flex;
-    gap: .5rem;
   }
 }

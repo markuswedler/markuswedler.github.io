@@ -14,3 +14,19 @@
     border: .0625rem solid #a3a3a3;
   }
 }
+
+.contact-btn{
+  @media (min-width: 426px){
+    &:not(.big){
+      padding: .6rem .8rem;
+    }
+  }
+  border-radius: 100vmax;
+  background: $main;
+  color: #fff;
+  transition: $transition;
+  padding: .75rem 1rem;
+  &:hover{
+    background: lighten($main, 10);
+  }
+}

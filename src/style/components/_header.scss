@@ -1,29 +1,24 @@
-header{
-  position: relative;
-  z-index: 999;
-  background: #fff;
-  position: fixed;
-  top: 0;
-  @media (min-width: 426px){
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  & > .wrapper{
+  header{
+    position: relative;
+    z-index: 999;
+    background: #fff;
+    position: fixed;
+    top: 0;
     @media (min-width: 426px){
-      padding: .75rem 0;
+      left: 50%;
+      transform: translateX(-50%);
     }
-    display: flex;
-    align-items: stretch;
-    border-bottom: 1px solid transparent;
-    transition: $transition;
-    padding: .5rem 0;
 
-    
-    // vertically center
-    & > *{
+    & > .wrapper{
+      @media (max-width: 426px){
+        padding: .5rem 0;
+      }
+      @media (min-width: 426px){
+        padding: .8rem 0;
+      }
       display: flex;
-      align-items: center;
+      border-bottom: .0625rem solid transparent;
+      transition: $transition;
     }
 
 
@@ -31,6 +26,8 @@ header{
 
 
     .logo{
+      display: flex;
+      align-items: center;
       padding-left: .75rem;
       padding-right: .75rem;
       margin-left: -0.75rem;
@@ -38,7 +35,7 @@ header{
     }
   
 
-    nav{
+    ul{
       @media (max-width: 426px){
         visibility: hidden;
         opacity: 0;
@@ -46,56 +43,53 @@ header{
         top: 0;
         left: 0;
         z-index: -1;
+        height: stretch;
         background: #fff;
         width: 100%;
         height: stretch;
+        flex-flow: column;
+        justify-content: center;
         transition: $transition;
       }
-      ul{
-        @media (max-width: 426px){
-          padding: var(--wrapper-padding);
-        }
-        @media (min-width: 426px){
+      @media (min-width: 426px){
+        gap: .2rem;
+      }
+      display: flex;
+      li{
+        display: flex;
+        justify-content: center;
+        white-space: nowrap;
+        a{
+          @media (min-width: 426px){
+            padding: .6rem .8rem;
+          }
           display: flex;
-        }
-        li{
-          display: flex;
-          justify-content: center;
-          a{
-            padding: .75rem;
-            @media (min-width: 426px){
-              &:hover{
-                // border-bottom: .125rem solid $text;
-                // margin-bottom: -0.125rem;
-                // border-radius: .1rem;
-                transition: $transition;
-              }
+          align-items: center;
+          padding: .75rem 1rem;
+          &.contact-btn{
+            @media (max-width: 426px){
+              margin-top: .3rem;
             }
+            @media (min-width: 426px){
+              margin-left: .5rem;
+            }
+          }
+        }
+        &.lang a{
+          ion-icon{
+            &:nth-child(2){
+              font-size: .5rem;
+            }
+          }
+          @media (max-width: 426px){
+            position: absolute;
+            bottom: calc(var(--wrapper-padding) - 0.75rem);
+            right: calc(var(--wrapper-padding) - 0.75rem);
           }
         }
       }
     }
-    input:checked ~ nav{
-      visibility: visible;
-      opacity: 1;
-    }
-  
-
-    .lang-switch{
-      @media (max-width: 426px){
-        visibility: hidden;
-        opacity: 0;
-      }
-      font-size: .7rem;
-      font-weight: 600;
-      transition: $transition;
-      padding-left: .75rem;
-      padding-right: .75rem;
-      span{
-        color: #bcbcbc;
-      }
-    }
-    input:checked ~ .lang-switch{
+    input:checked ~ ul{
       visibility: visible;
       opacity: 1;
     }
@@ -128,4 +122,3 @@ header{
       &::after{ transform: rotate(-45deg); }
     }
   }
-}
