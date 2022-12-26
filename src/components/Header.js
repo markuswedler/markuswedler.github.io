@@ -8,24 +8,12 @@ const Header = () => {
   }
   
   useEffect(()=>{
-    window.addEventListener("scroll", changeHeader)
     changeHeader()
-    // prevent body scroll when menu is opened
-    document.querySelector('header input').addEventListener("change", ()=>{
-      if(document.querySelector('header input').checked){
-        document.body.style.overflow = "hidden"
-        document.querySelector('header .wrapper').style.borderBottomColor = "transparent"
-      }
-      else{
-        document.body.style.overflow = "unset"
-        changeHeader()
-      }
-    })
+    window.addEventListener("scroll", changeHeader)
     // close menu on link click
     document.querySelectorAll('header ul a').forEach(link => {
       link.addEventListener("click", ()=>{
         document.querySelector('header input').checked = false
-        document.body.style.overflow = "unset"
       })
     })
   }, [])
