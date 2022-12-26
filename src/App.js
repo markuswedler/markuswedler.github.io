@@ -75,8 +75,8 @@ const App = () => {
             </a>
             <a href="https://markuswedler.github.io/designer_portfolio">
               <div className="img"  style={{ backgroundImage: "url('/images/logos/jeffross.svg')" }}/>
-              <h3>Designer's Portfolio</h3>
-              <p>Jefferson - Graphic Designer and Web&nbsp;Developer</p>
+              <h3>Jefferson</h3>
+              <p>Graphic Designer and Web Developer&nbsp;Portfolio</p>
             </a>
           </div>
           {/* <a href="/" className="btn outline">All Works&nbsp;<ion-icon name="arrow-forward-outline"/></a> */}

@@ -112,6 +112,11 @@ header > .wrapper {
   transition: 0.2s;
   padding: 0.5rem 0;
 }
+@media (min-width: 426px) {
+  header > .wrapper {
+    padding: 0.75rem 0;
+  }
+}
 header > .wrapper > * {
   display: flex;
   align-items: center;
