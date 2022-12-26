@@ -66,7 +66,7 @@ p {
   border: 0.0625rem solid #a3a3a3;
 }
 
-a[href="#contact"] {
+a.contact {
   border-radius: 100vmax;
   background: #242424;
   color: #fff;
@@ -74,11 +74,11 @@ a[href="#contact"] {
   padding: 0.75rem 1rem;
 }
 @media (min-width: 426px) {
-  a[href="#contact"] {
+  a.contact {
     padding: 0.6rem 0.8rem;
   }
 }
-a[href="#contact"]:hover {
+a.contact:hover {
   background: #3e3e3e;
 }
 
@@ -153,7 +153,7 @@ header ul {
     flex-flow: column;
     justify-content: center;
     transition: 0.15s;
-    padding: 2rem 1.9rem 1.9rem;
+    padding: 1.9rem 0;
   }
 }
 @media (min-width: 426px) {
@@ -162,12 +162,15 @@ header ul {
   }
 }
 header ul li {
+  width: 100%;
   display: flex;
   justify-content: center;
   white-space: nowrap;
 }
-header ul li a {
-  padding: 0.75rem 1rem;
+@media (max-width: 426px) {
+  header ul li a:not(.contact) {
+    padding: 0.75rem 3rem;
+  }
 }
 @media (min-width: 426px) {
   header ul li a {
@@ -175,29 +178,19 @@ header ul li a {
   }
 }
 @media (max-width: 426px) {
-  header ul li a.contact-btn {
-    margin-top: 0.3rem;
+  header ul li a.contact {
+    margin-top: 0.4rem;
   }
 }
 @media (min-width: 426px) {
-  header ul li a.contact-btn {
+  header ul li a.contact {
     margin-left: 0.5rem;
-  }
-}
-header ul li.lang a ion-icon:nth-child(2) {
-  font-size: 0.5rem;
-}
-@media (max-width: 426px) {
-  header ul li.lang a {
-    position: absolute;
-    bottom: calc(var(--wrapper-padding) - 0.75rem);
-    right: calc(var(--wrapper-padding) - 0.75rem);
   }
 }
 header input:checked ~ ul {
   visibility: visible;
   opacity: 1;
-  padding: 2.55rem 2rem 2rem;
+  padding: 2rem 0;
 }
 header label {
   cursor: pointer;
@@ -341,7 +334,7 @@ section.hero p {
   padding-top: 0.75rem;
   padding-bottom: 0.5rem;
 }
-section.hero a[href="#contact"] {
+section.hero a.contact {
   display: inline-block;
   padding: 0.75rem 1rem;
 }
@@ -500,14 +493,6 @@ section.works .works a p {
 }
 section.works .btn {
   margin-top: 2.25rem;
-}
-
-section.contact {
-  padding-left: 0;
-  padding-right: 0;
-}
-section.contact .email {
-  font-weight: 700;
 }
 
 * {

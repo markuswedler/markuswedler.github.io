@@ -34,7 +34,7 @@ const App = () => {
           <div className="container">
             <h1>Hi, I'm Sergei!</h1>
             <p><b>A web developer currently based in Vladivostok.</b> Though I'm still a studen, it doesn't stop me from realizing my dreams of being a professional web&nbsp;developer.</p>
-            <a href="#contact">Contact</a>
+            <a href="mailto:ghbdtnghbdtn8@gmail.com" className="contact">Contact</a>
           </div>
           <a href="#about" className="arrow-down"><ion-icon name="arrow-down-outline"/></a>
         </section>
@@ -84,11 +84,6 @@ const App = () => {
             </a>
           </div>
           {/* <a href="/" className="btn outline">All Works&nbsp;<ion-icon name="arrow-forward-outline"/></a> */}
-        </section>
-        <section className="contact" id="contact">
-          <h1 className="title">Contact</h1>
-          <h4>Email</h4>
-          <a href="mailto:ghbdtnghbdtn8@gmail.com" className="email">ghbdtnghbdtn8@gmail.com</a>
         </section>
       </main>
       <Footer/>
