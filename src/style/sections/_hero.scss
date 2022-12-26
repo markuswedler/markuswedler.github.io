@@ -4,17 +4,12 @@ section.hero{
   }
   @media (min-width: 426px){
     height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr repeat(3, auto) 1fr;
+    display: flex;
+    align-items: center;
     gap: 0 2rem;
   }
   
   .pfp{
-    @media (min-width: 426px){
-      align-self: center;
-      grid-row: 1/6;
-    }
     @media (max-width: 426px){
       margin-bottom: 2rem;
     }

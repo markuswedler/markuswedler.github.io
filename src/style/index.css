@@ -319,9 +319,8 @@ footer .links {
 @media (min-width: 426px) {
   section.hero {
     height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr repeat(3, auto) 1fr;
+    display: flex;
+    align-items: center;
     gap: 0 2rem;
   }
 }
@@ -334,12 +333,6 @@ section.hero .pfp {
   filter: grayscale(100%) brightness(135%);
   position: relative;
   z-index: -1;
-}
-@media (min-width: 426px) {
-  section.hero .pfp {
-    align-self: center;
-    grid-row: 1/6;
-  }
 }
 @media (max-width: 426px) {
   section.hero .pfp {
