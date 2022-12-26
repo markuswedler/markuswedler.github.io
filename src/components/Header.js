@@ -27,7 +27,7 @@ const Header = () => {
           <li><a href="#">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#works">Works</a></li>
-          <li><a href="#contact" className="contact-btn">Contact</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
         <label htmlFor="menuBtn"/>
       </div>

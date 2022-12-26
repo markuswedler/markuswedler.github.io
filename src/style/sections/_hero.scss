@@ -27,9 +27,9 @@ section.hero{
     padding-top: .75rem;
     padding-bottom: .5rem;
   }
-  .contact-btn{
+  a[href="#contact"]{
     display: inline-block;
-    width: min-content;
+    padding: .75rem 1rem;
   }
 
   .arrow-down{

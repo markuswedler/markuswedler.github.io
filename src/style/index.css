@@ -66,7 +66,7 @@ p {
   border: 0.0625rem solid #a3a3a3;
 }
 
-.contact-btn {
+a[href="#contact"] {
   border-radius: 100vmax;
   background: #242424;
   color: #fff;
@@ -74,11 +74,11 @@ p {
   padding: 0.75rem 1rem;
 }
 @media (min-width: 426px) {
-  .contact-btn:not(.big) {
+  a[href="#contact"] {
     padding: 0.6rem 0.8rem;
   }
 }
-.contact-btn:hover {
+a[href="#contact"]:hover {
   background: #3e3e3e;
 }
 
@@ -341,11 +341,9 @@ section.hero p {
   padding-top: 0.75rem;
   padding-bottom: 0.5rem;
 }
-section.hero .contact-btn {
+section.hero a[href="#contact"] {
   display: inline-block;
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
+  padding: 0.75rem 1rem;
 }
 section.hero .arrow-down {
   position: absolute;

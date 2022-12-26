@@ -15,11 +15,9 @@
   }
 }
 
-.contact-btn{
+a[href="#contact"]{
   @media (min-width: 426px){
-    &:not(.big){
-      padding: .6rem .8rem;
-    }
+    padding: .6rem .8rem;
   }
   border-radius: 100vmax;
   background: $main;

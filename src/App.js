@@ -34,7 +34,7 @@ const App = () => {
           <div className="container">
             <h1>Hi, I'm Sergei!</h1>
             <p><b>A web developer currently based in Vladivostok.</b> Though I'm still a studen, it doesn't stop me from realizing my dreams of being a professional web&nbsp;developer.</p>
-            <a href="#contact" className="contact-btn big">Contact</a>
+            <a href="#contact">Contact</a>
           </div>
           <a href="#about" className="arrow-down"><ion-icon name="arrow-down-outline"/></a>
         </section>
