@@ -6,7 +6,7 @@
   border-radius: 0.25rem;
   font-weight: 700;
   color: #fff;
-  background: $primary;
+  background: $main;
   padding: 1rem 2rem;
   &.outline{
     background: none;
@@ -22,6 +22,7 @@ a.contact{
   border-radius: 100vmax;
   background: $main;
   color: #fff;
+  font-weight: 500;
   transition: $transition;
   padding: .75rem 1rem;
   &:hover{

@@ -1,8 +1,8 @@
 section.hero{
-  @media (max-width: 426px){
+  @media (max-width: 769px){
     padding-top: 1.5rem;
   }
-  @media (min-width: 426px){
+  @media (min-width: 769px){
     height: 100vh;
     display: flex;
     align-items: center;
@@ -10,7 +10,10 @@ section.hero{
   }
   
   .pfp{
-    @media (max-width: 426px){
+    @media (max-width: 769px){
+      max-width: 20rem;
+      margin-left: auto;
+      margin-right: auto;
       margin-bottom: 2rem;
     }
     width: 100%;
@@ -24,7 +27,7 @@ section.hero{
   }
 
   p{
-    padding-top: .75rem;
+    padding-top: .5rem;
     padding-bottom: .5rem;
   }
   a.contact{
@@ -33,7 +36,7 @@ section.hero{
   }
 
   .arrow-down{
-    @media (max-width: 426px){ display: none; }
+    @media (max-width: 769px){ display: none; }
     position: absolute;
     bottom: 5%;
     transition: $transition;

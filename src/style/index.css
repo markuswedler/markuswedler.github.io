@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 :root {
   --wrapper-padding: 24px;
 }
@@ -10,7 +10,7 @@
 }
 
 body {
-  font-family: "Archivo", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 ul {
@@ -28,7 +28,16 @@ a {
 }
 
 h1 {
-  font-size: 1.625rem;
+  font-size: 3rem;
+}
+@media (max-width: 769px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+h2 {
+  font-size: 1.875rem;
 }
 
 .title {
@@ -57,7 +66,7 @@ p {
   border-radius: 0.25rem;
   font-weight: 700;
   color: #fff;
-  background: #64b5f6;
+  background: #242424;
   padding: 1rem 2rem;
 }
 .btn.outline {
@@ -70,6 +79,7 @@ a.contact {
   border-radius: 100vmax;
   background: #242424;
   color: #fff;
+  font-weight: 500;
   transition: 0.15s;
   padding: 0.75rem 1rem;
 }
@@ -91,7 +101,7 @@ a.contact:hover {
   margin-right: auto;
 }
 
-@media (min-width: 426px) {
+@media (min-width: 769px) {
   main.wrapper {
     padding-top: 0 !important;
   }
@@ -104,7 +114,7 @@ header {
   position: fixed;
   top: 0;
 }
-@media (min-width: 426px) {
+@media (min-width: 769px) {
   header {
     left: 50%;
     transform: translateX(-50%);
@@ -115,12 +125,12 @@ header > .wrapper {
   border-bottom: 0.0625rem solid transparent;
   transition: 0.15s;
 }
-@media (max-width: 426px) {
+@media (max-width: 769px) {
   header > .wrapper {
     padding: 0.5rem 0;
   }
 }
-@media (min-width: 426px) {
+@media (min-width: 769px) {
   header > .wrapper {
     padding: 0.8rem 0;
   }
@@ -139,7 +149,7 @@ header .logo {
 header ul {
   display: flex;
 }
-@media (max-width: 426px) {
+@media (max-width: 769px) {
   header ul {
     visibility: hidden;
     opacity: 0;
@@ -156,7 +166,7 @@ header ul {
     padding: 1.9rem 0;
   }
 }
-@media (min-width: 426px) {
+@media (min-width: 769px) {
   header ul {
     align-items: center;
     gap: 0.2rem;
@@ -168,22 +178,22 @@ header ul li {
   justify-content: center;
   white-space: nowrap;
 }
-@media (max-width: 426px) {
+@media (max-width: 769px) {
   header ul li a:not(.contact) {
     padding: 0.75rem 3rem;
   }
 }
-@media (min-width: 426px) {
+@media (min-width: 769px) {
   header ul li a {
     padding: 0.6rem 0.8rem;
   }
 }
-@media (max-width: 426px) {
+@media (max-width: 769px) {
   header ul li a.contact {
     margin-top: 0.4rem;
   }
 }
-@media (min-width: 426px) {
+@media (min-width: 769px) {
   header ul li a.contact {
     margin-left: 0.5rem;
   }
@@ -205,7 +215,7 @@ header label {
   padding: 12px;
   margin-right: -12px;
 }
-@media (min-width: 426px) {
+@media (min-width: 769px) {
   header label {
     display: none;
   }
@@ -327,12 +337,12 @@ footer .links img {
   width: 1rem;
 }
 
-@media (max-width: 426px) {
+@media (max-width: 769px) {
   section.hero {
     padding-top: 1.5rem;
   }
 }
-@media (min-width: 426px) {
+@media (min-width: 769px) {
   section.hero {
     height: 100vh;
     display: flex;
@@ -350,13 +360,16 @@ section.hero .pfp {
   position: relative;
   z-index: -1;
 }
-@media (max-width: 426px) {
+@media (max-width: 769px) {
   section.hero .pfp {
+    max-width: 20rem;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 2rem;
   }
 }
 section.hero p {
-  padding-top: 0.75rem;
+  padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
 section.hero a.contact {
@@ -371,7 +384,7 @@ section.hero .arrow-down {
           animation: 1s arrow_down ease-in alternate infinite;
   left: 50%;
 }
-@media (max-width: 426px) {
+@media (max-width: 769px) {
   section.hero .arrow-down {
     display: none;
   }
@@ -399,17 +412,17 @@ section.hero .arrow-down img {
   width: 2rem;
 }
 
-@media (max-width: 426px) {
+@media (max-width: 769px) {
   section.about {
     margin-top: 5rem;
   }
 }
 section.about .container {
-  background: rgba(0, 0, 0, 0.035);
+  background: rgba(0, 0, 0, 0.03);
   border-radius: 3rem;
   padding: 3rem;
 }
-@media (min-width: 426px) {
+@media (min-width: 769px) {
   section.about .container {
     padding: 4rem;
   }
@@ -423,7 +436,7 @@ section.about .container {
     padding: 5rem;
   }
 }
-@media (min-width: 426px) {
+@media (min-width: 769px) {
   section.about .title {
     grid-column: 3/1;
   }
@@ -432,7 +445,7 @@ section.about img {
   display: block;
   width: 6rem;
 }
-section.about h1 {
+section.about h2 {
   margin-top: 1.2rem;
   margin-bottom: 0.75rem;
 }
@@ -565,14 +578,4 @@ html {
 
 body {
   cursor: default;
-}
-
-::-moz-selection {
-  background: #64b5f6;
-  color: #fff;
-}
-
-::selection {
-  background: #64b5f6;
-  color: #fff;
 }/*# sourceMappingURL=index.css.map */

@@ -4,16 +4,16 @@
     background: #fff;
     position: fixed;
     top: 0;
-    @media (min-width: 426px){
+    @media (min-width: 769px){
       left: 50%;
       transform: translateX(-50%);
     }
 
     & > .wrapper{
-      @media (max-width: 426px){
+      @media (max-width: 769px){
         padding: .5rem 0;
       }
-      @media (min-width: 426px){
+      @media (min-width: 769px){
         padding: .8rem 0;
       }
       display: flex;
@@ -36,7 +36,7 @@
   
 
     ul{
-      @media (max-width: 426px){
+      @media (max-width: 769px){
         visibility: hidden;
         opacity: 0;
         background: #fff;
@@ -51,7 +51,7 @@
         transition: $transition;
         padding: 1.9rem 0;
       }
-      @media (min-width: 426px){
+      @media (min-width: 769px){
         align-items: center;
         gap: .2rem;
       }
@@ -62,19 +62,19 @@
         justify-content: center;
         white-space: nowrap;
         a{
-          @media (max-width: 426px){
+          @media (max-width: 769px){
             &:not(.contact){
               padding: .75rem 3rem;
             }
           }
-          @media (min-width: 426px){
+          @media (min-width: 769px){
             padding: .6rem .8rem;
           }
           &.contact{
-            @media (max-width: 426px){
+            @media (max-width: 769px){
               margin-top: .4rem;
             }
-            @media (min-width: 426px){
+            @media (min-width: 769px){
               margin-left: .5rem;
             }
           }
@@ -89,7 +89,7 @@
   
 
     label{
-      @media (min-width: 426px){ display: none; }
+      @media (min-width: 769px){ display: none; }
       cursor: pointer;
       position: relative;
       width: 48px;

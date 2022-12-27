@@ -1,10 +1,10 @@
 section.about{
-  @media (max-width: 426px){
+  @media (max-width: 769px){
     margin-top: 5rem;
   }
 
   .container{
-    @media (min-width: 426px){
+    @media (min-width: 769px){
       padding: 4rem;
     }
     @media (min-width: 769px){
@@ -14,13 +14,13 @@ section.about{
       gap: 0 2rem;
       padding: 5rem;
     }
-    background: rgb(#000, 0.035);
+    background: rgb(#000, 0.03);
     border-radius: 3rem;
     padding: 3rem;
   }
 
   .title{
-    @media (min-width: 426px){
+    @media (min-width: 769px){
       grid-column: 3/1;
     }
   }
@@ -30,7 +30,7 @@ section.about{
     width: 6rem;
   }
 
-  h1{
+  h2{
     margin-top: 1.2rem;
     margin-bottom: .75rem;
   }

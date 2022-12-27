@@ -1,5 +1,5 @@
 body{
-  font-family: "Archivo", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 
@@ -18,7 +18,13 @@ a{
   color: $main;
 }
 h1{
-  font-size: 1.625rem;
+  @media (max-width: 769px){
+    font-size: 2rem;
+  }
+  font-size: 3rem;
+}
+h2{
+  font-size: 1.875rem;
 }
 .title{
   text-align: center;

@@ -30,7 +30,7 @@ const App = () => {
         <section className="hero" id="home">
           <div className="pfp" style={{ backgroundImage: "url('/images/pfp.jpg')" }}/>
           <div className="container">
-            <h1>Hi, I'm Sergei!</h1>
+            <h2>Hi, I'm Sergei!</h2>
             <p><b>A web developer currently based in Vladivostok.</b> Though I'm still a studen, it doesn't stop me from realizing my dreams of being a professional web&nbsp;developer.</p>
             <a href="mailto:ghbdtnghbdtn8@gmail.com" className="contact">Contact</a>
           </div>
@@ -40,7 +40,7 @@ const App = () => {
           <div className="container">
             <div>
               <img src="/images/lego_brick.svg"/>
-              <h1>Where it all starts</h1>
+              <h2>Where it all starts</h2>
               <p>Loving playing with lego since childhood once I found out about web developing and understood that it's not just but much more than creating something from different shapes. That's how love for teamwork and helping people achieve their goals came just from childhood&nbsp;hobby.</p>
             </div>
             <ul>
@@ -68,7 +68,7 @@ const App = () => {
           </div>
         </section>
         <section className="works" id="works">
-          <h1 className="title">My Works</h1>
+          <h2 className="title">My Works</h2>
           <div className="works">
             <a href="https://amvtheatres.vercel.app">
               <div className="img"  style={{ backgroundImage: "url('/images/logos/amvtheatres.svg')" }}/>
