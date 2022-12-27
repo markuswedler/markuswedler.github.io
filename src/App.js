@@ -73,12 +73,12 @@ const App = () => {
             <a href="https://amvtheatres.vercel.app">
               <div className="img"  style={{ backgroundImage: "url('/images/logos/amvtheatres.svg')" }}/>
               <h3>AMV Theatres</h3>
-              <p>Movie theatre website that was created for a univercity course&nbsp;project</p>
+              <p>Movie theatre website that was created for a univercity's course&nbsp;project</p>
             </a>
             <a href="https://markuswedler.github.io/optic-shop">
               <div className="img"  style={{ backgroundImage: "url('/images/logos/optic-shop.svg')" }}/>
               <h3>Optic Shop</h3>
-              <p>Optic Shop's main page. Was inspired while scrolling through&nbsp;Instagram</p>
+              <p>Optic Shop main page. Was inspired while scrolling through&nbsp;Instagram</p>
             </a>
             <a href="https://markuswedler.github.io/designer_portfolio">
               <div className="img"  style={{ backgroundImage: "url('/images/logos/jeffross.svg')" }}/>

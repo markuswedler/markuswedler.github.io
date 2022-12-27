@@ -7,27 +7,20 @@ section.works{
     gap: 2.25rem;
     
     a{
-      display: block;
-      text-align: center;
-      padding-top: .75rem;
-      padding-bottom: .75rem;
-      margin-top: -0.75rem;
-      margin-bottom: -0.75rem;
+      display: flex;
+      flex-flow: column;
+      border: .0625rem solid #ccc;
+      border-radius: 2rem;
+      padding: 2rem;
       .img{
-        aspect-ratio: 120/69;
-        height: 6.875rem;
-        border-radius: .9rem;
+        width: 7rem;
+        aspect-ratio: 1/1;
         background-size: contain;
-        background-position: center;
         background-repeat: no-repeat;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      h3{
-        margin-top: 1.5rem;
+        margin-bottom: auto;
       }
       p{
-        margin-top: 1rem;
+        margin-top: .75rem;
       }
     }
   }
