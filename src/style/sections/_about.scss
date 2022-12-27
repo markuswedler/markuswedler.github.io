@@ -1,4 +1,8 @@
 section.about{
+  @media (max-width: 426px){
+    margin-top: 5rem;
+  }
+
   .container{
     @media (min-width: 426px){
       padding: 4rem;

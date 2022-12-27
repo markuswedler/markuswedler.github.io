@@ -399,6 +399,11 @@ section.hero .arrow-down img {
   width: 2rem;
 }
 
+@media (max-width: 426px) {
+  section.about {
+    margin-top: 5rem;
+  }
+}
 section.about .container {
   background: rgba(0, 0, 0, 0.035);
   border-radius: 3rem;
