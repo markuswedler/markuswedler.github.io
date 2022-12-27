@@ -3,19 +3,22 @@ import { useEffect } from "react"
 const Header = () => {
   // change header on scroll
   const changeHeader = () => {
-    if(window.scrollY > 0) document.querySelector('header .wrapper').style.borderBottomColor = "rgba(0, 0, 0, .1)"
-    else document.querySelector('header .wrapper').style.borderBottomColor = "transparent"
+    const wrapper = document.querySelector('header .wrapper')
+    if(window.scrollY > 0) wrapper.style.borderBottomColor = "rgba(0, 0, 0, .1)"
+    else wrapper.style.borderBottomColor = "transparent"
   }
   
   useEffect(()=>{
+    // change header on render if needed
     changeHeader()
+    // add scroll event listener
     window.addEventListener("scroll", changeHeader)
     // close menu on link click
-    document.querySelectorAll('header ul a').forEach(link => {
-      link.addEventListener("click", ()=>{
-        document.querySelector('header input').checked = false
-      })
-    })
+    const links = document.querySelectorAll('header ul a')
+    const input = document.querySelector('header input')
+    links.forEach(link =>
+      link.addEventListener("click", () => input.checked = false)
+    )
   }, [])
 
   return (

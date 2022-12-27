@@ -2,11 +2,12 @@ import { useEffect } from "react"
 
 const Footer = () => {
   useEffect(()=>{
-    document.addEventListener("click", (e)=>{
-      if(!document.querySelector('footer .languages label').contains(e.target) && !document.querySelector('footer .languages input').contains(e.target))
-        document.querySelector('footer .languages input').checked = false
+    document.addEventListener("click", (e) => {
+      const label = document.querySelector('footer .languages label')
+      const input = document.querySelector('footer .languages input')
+      if(!label.contains(e.target) && !input.contains(e.target)) input.checked = false
     })
-  })
+  }, [])
 
   return (
     <footer className="wrapper">
