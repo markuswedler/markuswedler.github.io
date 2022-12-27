@@ -19,10 +19,12 @@ const App = () => {
       if(window.scrollY > 0){
         document.querySelector('.arrow-down').style.opacity = 0
         document.querySelector('.arrow-down').style.pointerEvents = "none"
+        document.querySelector('.arrow-down').tabIndex = -1
       }
       else{
         document.querySelector('.arrow-down').style.opacity = 1
         document.querySelector('.arrow-down').style.pointerEvents = "unset"
+        document.querySelector('.arrow-down').tabIndex = 0
       }
     })
   }, [])
