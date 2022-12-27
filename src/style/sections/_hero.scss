@@ -41,7 +41,7 @@ section.hero{
       from{ transform: translate(-50%, -10%); }
       to{ transform: translate(-50%, 10%); }
     }
-    animation: 1s arrow_down ease-out alternate infinite;
+    animation: 1s arrow_down ease-in alternate infinite;
     left: 50%;
     ion-icon{
       font-size: 2rem;

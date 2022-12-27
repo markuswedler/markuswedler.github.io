@@ -14,7 +14,7 @@ const App = () => {
     })
     // add arrow down event listener
     window.addEventListener("scroll", ()=>{
-      if(window.scrollY > 50){
+      if(window.scrollY > 0){
         document.querySelector('.arrow-down').style.opacity = 0
         document.querySelector('.arrow-down').style.pointerEvents = "none"
       }
@@ -39,30 +39,35 @@ const App = () => {
           <a href="#about" className="arrow-down"><img src="/images/arrow_down_1.svg" alt="" /></a>
         </section>
         <section className="about" id="about">
-          <h1 className="title">About</h1>
-          <p>Loving playing with lego since childhood once I found out about web developing and understood that it's not just but much more than creating something from different shapes. That's how love for teamwork and helping people achieve their goals came just from childhood&nbsp;hobby.</p>
-          <ul>
-            <li>
-              <h4>HTML & CSS</h4>
-              <span/>
-              <div/>
-            </li>
-            <li>
-              <h4>JavaScript</h4>
-              <span/>
-              <div/>
-            </li>
-            <li>
-              <h4>React & Next.js</h4>
-              <span/>
-              <div/>
-            </li>
-            <li>
-              <h4>Git & GitHub</h4>
-              <span/>
-              <div/>
-            </li>
-          </ul>
+          <div className="container">
+            <div>
+              <img src="/images/lego_brick.svg"/>
+              <h1>Where it all starts</h1>
+              <p>Loving playing with lego since childhood once I found out about web developing and understood that it's not just but much more than creating something from different shapes. That's how love for teamwork and helping people achieve their goals came just from childhood&nbsp;hobby.</p>
+            </div>
+            <ul>
+              <li>
+                <h4>HTML & CSS</h4>
+                <span/>
+                <div/>
+              </li>
+              <li>
+                <h4>JavaScript</h4>
+                <span/>
+                <div/>
+              </li>
+              <li>
+                <h4>React & Next.js</h4>
+                <span/>
+                <div/>
+              </li>
+              <li>
+                <h4>Git & GitHub</h4>
+                <span/>
+                <div/>
+              </li>
+            </ul>
+          </div>
         </section>
         <section className="works" id="works">
           <h1 className="title">My Works</h1>
