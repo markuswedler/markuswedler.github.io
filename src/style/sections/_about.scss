@@ -14,7 +14,7 @@ section.about{
       gap: 0 2rem;
       padding: 5rem;
     }
-    background: rgb(#000, 0.03);
+    background: rgb(#000, 0.02);
     border-radius: 3rem;
     padding: 3rem;
   }
@@ -63,7 +63,7 @@ section.about{
       div{
         position: relative;
         height: 10px;
-        background: lighten($main, 77);
+        background: lighten($main, 80);
         margin-top: .375rem;
         &::before{
           content: '';

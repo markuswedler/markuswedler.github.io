@@ -30,9 +30,6 @@ const Footer = () => {
               </a>
           </div>
         </div>
-        <div className="middle">
-          made with&nbsp;<ion-icon name="heart"/>
-        </div>
         <div className="links">
           <a href=""><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="github link" /></a>
           <a href=""><img src="https://cdn.worldvectorlogo.com/logos/devto.svg" alt="dev.to link" /></a>

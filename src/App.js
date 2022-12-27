@@ -9,7 +9,11 @@ const App = () => {
     // set marginTop for main section
     document.querySelector('main').style.paddingTop = document.querySelector('header').offsetHeight + "px"
     // set links stops
-    document.querySelectorAll('section').forEach(section => section.style.scrollMargin = document.querySelector('header').offsetHeight + "px")
+    const sections = document.querySelectorAll('section')
+    sections.forEach(section => {
+      if(section.classList.contains('about')) section.style.scrollMargin = document.querySelector('header').offsetHeight + 20 + "px"
+      else section.style.scrollMargin = document.querySelector('header').offsetHeight + "px"
+    })
     // add arrow down event listener
     window.addEventListener("scroll", ()=>{
       if(window.scrollY > 0){
