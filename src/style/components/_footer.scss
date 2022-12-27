@@ -35,11 +35,14 @@ footer{
       &:hover{
         background: #F7F7F7;
       }
+      ion-icon{
+        --ionicon-stroke-width: 2.7rem;
+      }
       span{
         font-weight: 600;
       }
-      ion-icon{
-        --ionicon-stroke-width: 2.7rem;
+      img{
+        width: .5rem;
       }
     }
 
@@ -76,8 +79,26 @@ footer{
     }
   }
 
+  .middle{
+    @media (max-width: 350px){ display: none; }
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    font-family: monospace;
+    color: $text;
+  }
+
   .links{
     display: flex;
-    gap: .5rem;
+    gap: 1rem;
+    a{
+      display: flex;
+      align-items: center;
+    }
+    img{
+      width: 1rem;
+    }
   }
 }

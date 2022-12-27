@@ -3,6 +3,11 @@
 :root {
   --wrapper-padding: 24px;
 }
+@media (min-width: 1025px) {
+  :root {
+    --wrapper-padding: 60px;
+  }
+}
 
 body {
   font-family: "Archivo", sans-serif;
@@ -84,7 +89,7 @@ a.contact:hover {
 
 .wrapper {
   width: 100%;
-  max-width: 1250px;
+  max-width: 1440px;
   padding-left: var(--wrapper-padding);
   padding-right: var(--wrapper-padding);
   margin-left: auto;
@@ -158,6 +163,7 @@ header ul {
 }
 @media (min-width: 426px) {
   header ul {
+    align-items: center;
     gap: 0.2rem;
   }
 }
@@ -260,11 +266,14 @@ footer .languages label {
 footer .languages label:hover {
   background: #F7F7F7;
 }
+footer .languages label ion-icon {
+  --ionicon-stroke-width: 2.7rem;
+}
 footer .languages label span {
   font-weight: 600;
 }
-footer .languages label ion-icon {
-  --ionicon-stroke-width: 2.7rem;
+footer .languages label img {
+  width: 0.5rem;
 }
 footer .languages .list {
   opacity: 0;
@@ -297,9 +306,30 @@ footer .languages .list a div:nth-child(1) {
 footer .languages .list a div:nth-child(2) {
   color: #4d4d4d;
 }
+footer .middle {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  font-family: monospace;
+  color: #4d4d4d;
+}
+@media (max-width: 350px) {
+  footer .middle {
+    display: none;
+  }
+}
 footer .links {
   display: flex;
-  gap: 0.5rem;
+  gap: 1rem;
+}
+footer .links a {
+  display: flex;
+  align-items: center;
+}
+footer .links img {
+  width: 1rem;
 }
 
 @media (max-width: 426px) {
@@ -369,6 +399,9 @@ section.hero .arrow-down {
 }
 section.hero .arrow-down ion-icon {
   font-size: 2rem;
+}
+section.hero .arrow-down img {
+  width: 2rem;
 }
 
 @media (min-width: 426px) {

@@ -36,7 +36,7 @@ const App = () => {
             <p><b>A web developer currently based in Vladivostok.</b> Though I'm still a studen, it doesn't stop me from realizing my dreams of being a professional web&nbsp;developer.</p>
             <a href="mailto:ghbdtnghbdtn8@gmail.com" className="contact">Contact</a>
           </div>
-          <a href="#about" className="arrow-down"><ion-icon name="arrow-down-outline"/></a>
+          <a href="#about" className="arrow-down"><img src="/images/arrow_down_1.svg" alt="" /></a>
         </section>
         <section className="about" id="about">
           <h1 className="title">About</h1>
