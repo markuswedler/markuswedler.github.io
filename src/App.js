@@ -6,6 +6,8 @@ import Footer from "./components/Footer"
 
 const App = () => {
   useEffect(()=>{
+    // TEST
+    console.log(navigator.language);
     // set marginTop for main section
     document.querySelector('main').style.paddingTop = document.querySelector('header').offsetHeight + "px"
     // set links stops
