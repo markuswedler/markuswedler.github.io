@@ -104,8 +104,8 @@ const App = () => {
             </a>
             <a href="https://markuswedler.github.io/test">
               <div className="img"/>
-              <h3>Отсутствующие</h3>
-              <p>То, чего не было в предыдущих работах</p>
+              <h3>Лабороторные</h3>
+              <p></p>
             </a>
           </div>
           {/* <a href="/" className="btn outline">All Works&nbsp;<ion-icon name="arrow-forward-outline"/></a> */}
