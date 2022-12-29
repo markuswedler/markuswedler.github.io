@@ -88,17 +88,17 @@ const App = () => {
               <a href=""></a>
             )) } */}
             <a href="https://amvtheatres.vercel.app">
-              <div className="img"  style={{ backgroundImage: "url('/images/logos/amv-theatres.svg')" }}/>
+              <div className="img"  style={{ backgroundImage: "url('/images/works_logos/amv-theatres.svg')" }}/>
               <h3>AMV Theatres</h3>
               <p>Movie theatre website that was created for a univercity's course&nbsp;project</p>
             </a>
             <a href="https://markuswedler.github.io/optic-shop">
-              <div className="img"  style={{ backgroundImage: "url('/images/logos/optic-shop.svg')" }}/>
+              <div className="img"  style={{ backgroundImage: "url('/images/works_logos/optic-shop.svg')" }}/>
               <h3>Optic Shop</h3>
               <p>Optic Shop main page. Was inspired while scrolling through&nbsp;Instagram</p>
             </a>
             <a href="https://markuswedler.github.io/designer_portfolio">
-              <div className="img"  style={{ backgroundImage: "url('/images/logos/jeffross.svg')" }}/>
+              <div className="img"  style={{ backgroundImage: "url('/images/works_logos/jeffross.svg')" }}/>
               <h3>Jefferson</h3>
               <p>Simple graphic designer and web developer&nbsp;portfolio</p>
             </a>

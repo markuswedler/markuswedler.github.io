@@ -31,9 +31,9 @@ const Footer = () => {
           </div>
         </div>
         <div className="links">
-          <a href=""><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="github link" /></a>
-          <a href=""><img src="https://cdn.worldvectorlogo.com/logos/devto.svg" alt="dev.to link" /></a>
-          <a href=""><img src="https://www.svgrepo.com/show/140440/youtube.svg" alt="youtube link" /></a>
+          <a href=""><img src="/images/links_logos/github.svg"/></a>
+          <a href=""><img src="/images/links_logos/devto.svg"/></a>
+          <a href=""><img src="/images/links_logos/youtube.svg"/></a>
         </div>
       </div>
     </footer>
