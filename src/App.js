@@ -102,7 +102,7 @@ const App = () => {
               <h3>Jefferson</h3>
               <p>Simple graphic designer and web developer&nbsp;portfolio</p>
             </a>
-            <a href="/test">
+            <a href="https://markuswedler.github.io/test">
               <div className="img"/>
               <h3>Отсутствующие</h3>
               <p>То, чего не было в предыдущих работах</p>
