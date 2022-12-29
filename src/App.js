@@ -1,13 +1,19 @@
 // react
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
+// hooks
+import useFetch from "./hooks/useFetch"
 // components
 import Header from "./components/Header"
 import Footer from "./components/Footer"
 
 const App = () => {
+  const [text, setText] = useState()
+
+  let lang = navigator.language
+  if(!lang == 'de' && !lang == "ja" && !lang == "ru") lang = "en-US"
+  useFetch('/api/' + lang + '.json').then(data => setText(data))
+
   useEffect(()=>{
-    // TEST
-    console.log(navigator.language);
     // set marginTop for main section
     document.querySelector('main').style.paddingTop = document.querySelector('header').offsetHeight + "px"
     // set links stops
@@ -38,9 +44,9 @@ const App = () => {
         <section className="hero" id="home">
           <div className="pfp" style={{ backgroundImage: "url('/images/pfp.jpg')" }}/>
           <div className="container">
-            <h2>Hi, I'm Sergei!</h2>
-            <p><b>A web developer currently based in Vladivostok.</b> Though I'm still a studen, it doesn't stop me from realizing my dreams of being a professional web&nbsp;developer.</p>
-            <a href="mailto:ghbdtnghbdtn8@gmail.com" className="contact">Contact</a>
+            <h2>{ text && text.hero.heading }</h2>
+            <p><b>{ text && text.hero.paragraphBold }</b>{ text && text.hero.paragraph }</p>
+            <a href="mailto:ghbdtnghbdtn8@gmail.com" className="contact">{ text && text.header.contact }</a>
           </div>
           <a href="#about" className="arrow-down"><img src="/images/arrow_down_1.svg" alt="" /></a>
         </section>
@@ -48,8 +54,8 @@ const App = () => {
           <div className="container">
             <div>
               <img src="/images/lego_brick.svg"/>
-              <h2>Where it all starts</h2>
-              <p>Loving playing with lego since childhood once I found out about web developing and understood that it's not just but much more than creating something from different shapes. That's how love for teamwork and helping people achieve their goals came just from childhood&nbsp;hobby.</p>
+              <h2>{ text && text.about.heading }</h2>
+              <p>{ text && text.about.paragraph }</p>
             </div>
             <ul>
               <li>
@@ -76,10 +82,13 @@ const App = () => {
           </div>
         </section>
         <section className="works" id="works">
-          <h2 className="title">My Works</h2>
+          <h2 className="title">{ text && text.works.title }</h2>
           <div className="works">
+            {/* { text && Object.keys(text.works.cards).map(card => (
+              <a href=""></a>
+            )) } */}
             <a href="https://amvtheatres.vercel.app">
-              <div className="img"  style={{ backgroundImage: "url('/images/logos/amvtheatres.svg')" }}/>
+              <div className="img"  style={{ backgroundImage: "url('/images/logos/amv-theatres.svg')" }}/>
               <h3>AMV Theatres</h3>
               <p>Movie theatre website that was created for a univercity's course&nbsp;project</p>
             </a>
@@ -92,6 +101,11 @@ const App = () => {
               <div className="img"  style={{ backgroundImage: "url('/images/logos/jeffross.svg')" }}/>
               <h3>Jefferson</h3>
               <p>Simple graphic designer and web developer&nbsp;portfolio</p>
+            </a>
+            <a href="/test">
+              <div className="img"/>
+              <h3>Отсутствующие</h3>
+              <p>То, чего не было в предыдущих работах</p>
             </a>
           </div>
           {/* <a href="/" className="btn outline">All Works&nbsp;<ion-icon name="arrow-forward-outline"/></a> */}

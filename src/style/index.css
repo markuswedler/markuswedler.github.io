@@ -547,6 +547,37 @@ section.works .btn {
   margin-top: 2.25rem;
 }
 
+section.test hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+section.test table {
+  border: 2px solid #000;
+}
+section.test table:nth-child(2) {
+  width: 100vw;
+}
+section.test table:nth-child(3) {
+  margin-left: auto;
+  margin-right: auto;
+}
+section.test table td {
+  border: 2px solid #000;
+}
+section.test table marquee {
+  font-family: sans-serif;
+  font-size: 12pt;
+  text-decoration: underline;
+}
+section.test .images {
+  display: flex;
+}
+section.test .images img {
+  display: block;
+  width: 40vw;
+  margin-left: auto;
+  margin-right: auto;
+}
 * {
   padding: 0;
   margin: 0;
