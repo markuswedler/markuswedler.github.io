@@ -181,10 +181,16 @@ header input {
 header .logo {
   display: flex;
   align-items: center;
+  font-family: sans-serif;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
   margin-left: -0.75rem;
   margin-right: auto;
+}
+header .logo ion-icon {
+  font-size: 2rem;
+  --ionicon-stroke-width: 3rem;
+  margin-right: 0.25rem;
 }
 header ul {
   display: flex;
