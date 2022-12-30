@@ -14,10 +14,14 @@ const App = () => {
   else if(navigator.language == "ru") var lang = "ru"
   else var lang = "en-US"
   useFetch(lang).then(data => setText(data))
-  localStorage.setItem('lang', lang)
-  console.log(lang);
 
   useEffect(()=>{
+    // hide loader
+    if(document.readyState === "complete") hideLoader()
+    else{
+      window.addEventListener("load", hideLoader)
+      return () => window.removeEventListener("load", hideLoader)
+    }
     // set links stops
     const sections = document.querySelectorAll('section')
     sections.forEach(section => {
@@ -49,7 +53,7 @@ const App = () => {
   }
 
   return (
-    <div onLoad={hideLoader}>
+    <>
       <div className="loader"/>
       <Header header={text && text.header} />
       <main className="wrapper">
@@ -112,7 +116,7 @@ const App = () => {
         </section>
       </main>
       <Footer footer={ text && text.footer } />
-    </div>
+    </>
   )
 }
 
