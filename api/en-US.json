@@ -8,26 +8,29 @@
   "hero": {
     "heading": "Hi, I'm Sergei!",
     "paragraphBold": "A web developer currently based in Vladivostok. ",
-    "paragraph": "Though I'm still a studen, it doesn't stop me from realizing my dreams of being a professional web developer."
+    "paragraph": "Though I'm still a studen, it doesn't stop me from chasing my dreams of being a professional web developer."
   },
   "about": {
     "heading": "Where it all starts",
-    "paragraph": "Loving playing with lego since childhood once I found out about web developing and understood that it's not just but much more than creating something from different shapes. That's how love for teamwork and helping people achieve their goals came just from childhood hobby."
+    "paragraph": "Loving playing with lego since childhood suddenly I found out about web developing and understood that it's not just but much more than creating something from different shapes. That's how love for teamwork and helping people achieve their goals came from childhood hobby."
   },
   "works": {
-    "title": "My Works",
+    "title": "My works",
     "cards": {
       "amv-theatres": {
+        "url": "amvtheatres.vercel.app",
         "title": "AMV Theatres",
-        "paragraph": "Movie theatre website that was created for a univercity's course&nbsp;project"
+        "paragraph": "Movie theatre website that was created for a univercity's course project"
       },
       "optic-shop": {
+        "url": "markuswedler.github.io/optic-shop",
         "title": "Optic Shop",
-        "paragraph": "Optic Shop main page. Was inspired while scrolling through&nbsp;Instagram"
+        "paragraph": "Optic Shop main page. Was inspired while scrolling through Instagram"
       },
       "jeffross": {
+        "url": "markuswedler.github.io/designer_portfolio",
         "title": "Jefferson",
-        "paragraph": "Simple graphic designer and web developer&nbsp;portfolio"
+        "paragraph": "Simple graphic designer and web developer portfolio"
       }
     }
   },
