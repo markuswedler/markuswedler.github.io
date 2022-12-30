@@ -48,7 +48,7 @@ section.about{
         font-size: .7rem;
         color: #fff;
         background: $main;
-        border-radius: .2rem;
+        border-radius: .3rem;
         padding: .5rem;
         &::after{
           content: '';
@@ -64,11 +64,14 @@ section.about{
         position: relative;
         height: 10px;
         background: lighten($main, 80);
+        border-radius: 100vmax;
         margin-top: .375rem;
         &::before{
           content: '';
           position: absolute;
           background: $main;
+          border-top-left-radius: 100vmax;
+          border-bottom-left-radius: 100vmax;
           height: 100%;
         }
       }
