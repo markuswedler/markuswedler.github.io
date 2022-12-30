@@ -101,6 +101,9 @@ a.contact:hover {
   margin-right: auto;
 }
 
+main.wrapper {
+  padding-top: 4.5rem;
+}
 @media (min-width: 769px) {
   main.wrapper {
     padding-top: 0 !important;
@@ -291,6 +294,9 @@ footer .languages input[type=checkbox] {
   opacity: 0;
   pointer-events: none;
 }
+footer .languages input[type=checkbox]:focus ~ label {
+  background: none;
+}
 footer .languages input[type=checkbox]:checked ~ .list {
   opacity: 1;
   visibility: visible;
@@ -363,11 +369,6 @@ footer .links img {
   width: 1rem;
 }
 
-@media (max-width: 769px) {
-  section.hero {
-    padding-top: 1.5rem;
-  }
-}
 @media (min-width: 769px) {
   section.hero {
     height: 100vh;

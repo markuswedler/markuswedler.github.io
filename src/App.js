@@ -17,8 +17,6 @@ const App = () => {
 
   useEffect(()=>{
     window.onload = () => showLoader(false)
-    // set marginTop for main section
-    document.querySelector('main').style.paddingTop = document.querySelector('header').offsetHeight + "px"
     // set links stops
     const sections = document.querySelectorAll('section')
     sections.forEach(section => {

@@ -15,6 +15,11 @@ footer{
       position: absolute;
       opacity: 0;
       pointer-events: none;
+      &:focus{
+        ~ label{
+          background: none;
+        }
+      }
       &:checked{
         ~ .list{
           opacity: 1;
@@ -35,7 +40,7 @@ footer{
       padding: .6rem .8rem;
       margin-left: -0.8rem;
       &:hover{
-        background: #F7F7F7;
+        background: $light;
       }
       ion-icon{
         --ionicon-stroke-width: 2.7rem;

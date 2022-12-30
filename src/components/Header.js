@@ -7,25 +7,25 @@ const Header = ({ header }) => {
     if(window.scrollY > 0) wrapper.style.borderBottomColor = "rgba(0, 0, 0, .1)"
     else wrapper.style.borderBottomColor = "transparent"
   }
-  
+
   useEffect(()=>{
     // change header on render if needed
     changeHeader()
     // add scroll event listener
     window.addEventListener("scroll", changeHeader)
-    // close menu on link click
-    const links = document.querySelectorAll('header ul a')
-    const input = document.querySelector('header input')
-    links.forEach(link =>
-      link.addEventListener("click", () => input.checked = false)
-    )
+    // close menu on outside or link click
+    document.addEventListener("click", (e) => {
+      const label = document.querySelector('header label')
+      const input = document.querySelector('header input')
+      if(!label.contains(e.target) && !input.contains(e.target)) input.checked = false
+    })
   }, [])
 
   return (
     <header className="wrapper">
       <div className="wrapper">
-        <input type="checkbox" id="menuBtn"/>
         <a href="/" className="logo">Sergei Mazhuga</a>
+        <input type="checkbox" id="menuBtn"/>
         <ul>
           <li><a href="#">{ header && header.home }</a></li>
           <li><a href="#about">{ header && header.about }</a></li>
