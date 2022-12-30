@@ -446,7 +446,7 @@ section.hero .arrow-down img {
   }
 }
 section.about .container {
-  background: rgba(0, 0, 0, 0.02);
+  background: #F7F7F7;
   border-radius: 3rem;
   padding: 3rem;
 }
