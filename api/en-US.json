@@ -8,7 +8,8 @@
   "hero": {
     "heading": "Hi, I'm Sergei!",
     "paragraphBold": "A web developer currently based in Vladivostok. ",
-    "paragraph": "Though I'm still a studen, it doesn't stop me from chasing my dreams of being a professional web developer."
+    "paragraph": "Though I'm still a studen, it doesn't stop me from chasing my dreams of being a professional web developer.",
+    "contact": "Contact"
   },
   "about": {
     "heading": "Where it all starts",
