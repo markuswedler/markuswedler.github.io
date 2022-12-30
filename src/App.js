@@ -14,9 +14,10 @@ const App = () => {
   else if(navigator.language == "ru") var lang = "ru"
   else var lang = "en-US"
   useFetch(lang).then(data => setText(data))
+  localStorage.setItem('lang', lang)
+  console.log(lang);
 
   useEffect(()=>{
-    window.onload = () => showLoader(false)
     // set links stops
     const sections = document.querySelectorAll('section')
     sections.forEach(section => {
@@ -38,87 +39,80 @@ const App = () => {
     })
   }, [])
 
-  const showLoader = (condition) => {
+  const hideLoader = () => {
     const loader = document.querySelector('.loader')
-    if(condition){
-      loader.style.transition = "0s"
-      loader.style.opacity = 1
-      loader.style.pointerEvents = "unset"
-    }
-    else{
-      setTimeout(()=>{
-        loader.style.transition = ".3s"
-        loader.style.opacity = 0
-        loader.style.pointerEvents = "none"
-      }, 100)
-    }
+    setTimeout(()=>{
+      loader.style.transition = ".3s"
+      loader.style.opacity = 0
+      loader.style.pointerEvents = "none"
+    }, 100)
   }
 
   return (
-    <>
+    <div onLoad={hideLoader}>
       <div className="loader"/>
-        <Header header={text && text.header} />
-        <main className="wrapper">
-          <section className="hero" id="home">
-            <div className="pfp" style={{ backgroundImage: "url('/images/pfp.jpg')" }}/>
-            <div className="container">
-              <h2>{ text && text.hero.heading }</h2>
-              <p><b>{ text && text.hero.paragraphBold }</b>{ text && text.hero.paragraph }</p>
-              <a href="mailto:ghbdtnghbdtn8@gmail.com" className="contact">{ text && text.header.contact }</a>
+      <Header header={text && text.header} />
+      <main className="wrapper">
+        <section className="hero" id="home">
+          <div className="pfp" style={{ backgroundImage: "url('/images/pfp.jpg')" }}/>
+          <div className="container">
+            <h2>{ text && text.hero.heading }</h2>
+            <p><b>{ text && text.hero.paragraphBold }</b>{ text && text.hero.paragraph }</p>
+            <a href="mailto:ghbdtnghbdtn8@gmail.com" className="contact">{ text && text.header.contact }</a>
+          </div>
+          <a href="#about" className="arrow-down"><img src="/images/arrow_down_1.svg" alt="" /></a>
+        </section>
+        <section className="about" id="about">
+          <div className="container">
+            <div>
+              <img src="/images/lego_brick.svg"/>
+              <h2>{ text && text.about.heading }</h2>
+              <p>{ text && text.about.paragraph }</p>
             </div>
-            <a href="#about" className="arrow-down"><img src="/images/arrow_down_1.svg" alt="" /></a>
-          </section>
-          <section className="about" id="about">
-            <div className="container">
-              <div>
-                <img src="/images/lego_brick.svg"/>
-                <h2>{ text && text.about.heading }</h2>
-                <p>{ text && text.about.paragraph }</p>
-              </div>
-              <ul>
-                <li>
-                  <h4>HTML & CSS</h4>
-                  <span/>
-                  <div/>
-                </li>
-                <li>
-                  <h4>JavaScript</h4>
-                  <span/>
-                  <div/>
-                </li>
-                <li>
-                  <h4>React & Next.js</h4>
-                  <span/>
-                  <div/>
-                </li>
-                <li>
-                  <h4>Git & GitHub</h4>
-                  <span/>
-                  <div/>
-                </li>
-              </ul>
-            </div>
-          </section>
-          <section className="works" id="works">
-            <h2 className="title">{ text && text.works.title }</h2>
-            <div className="works">{
-              text && Object.keys(text.works.cards).map(name => (
-                <a href={ "https://" + text.works.cards[name].url } key={name}>
-                  <div className="img"  style={{ backgroundImage: "url('/images/works_logos/" + name + ".svg')" }}/>
-                  <h3>{ text.works.cards[name].title }</h3>
-                  <p>{ text.works.cards[name].paragraph }</p>
-                </a>
-              ))}
-              <a href="https://markuswedler.github.io/test">
-                <div className="img"/>
-                <h3>Лабороторные</h3>
-                <p></p>
+            <ul>
+              <li>
+                <h4>HTML & CSS</h4>
+                <span/>
+                <div/>
+              </li>
+              <li>
+                <h4>JavaScript</h4>
+                <span/>
+                <div/>
+              </li>
+              <li>
+                <h4>React & Next.js</h4>
+                <span/>
+                <div/>
+              </li>
+              <li>
+                <h4>Git & GitHub</h4>
+                <span/>
+                <div/>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section className="works" id="works">
+          <h2 className="title">{ text && text.works.title }</h2>
+          <div className="works">{
+            text && Object.keys(text.works.cards).map(name => (
+              <a href={ "https://" + text.works.cards[name].url } key={name}>
+                <div className="img"  style={{ backgroundImage: "url('/images/works_logos/" + name + ".svg')" }}/>
+                <h3>{ text.works.cards[name].title }</h3>
+                <p>{ text.works.cards[name].paragraph }</p>
               </a>
-            </div>
-          </section>
-        </main>
-        <Footer footer={ text && text.footer } />
-    </>
+            ))}
+            <a href="https://markuswedler.github.io/test">
+              <div className="img"/>
+              <h3>Лабороторные</h3>
+              <p></p>
+            </a>
+          </div>
+        </section>
+      </main>
+      <Footer footer={ text && text.footer } />
+    </div>
   )
 }
 
