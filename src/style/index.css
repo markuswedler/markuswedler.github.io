@@ -23,7 +23,7 @@ a {
 }
 
 .logo, h1, h2, h3, h4, h5, h6 {
-  font-family: "Rubik", sans-serif;
+  font-family: "Rubik";
   color: #242424;
 }
 
@@ -186,11 +186,6 @@ header .logo {
   padding-right: 0.75rem;
   margin-left: -0.75rem;
   margin-right: auto;
-}
-header .logo ion-icon {
-  font-size: 2rem;
-  --ionicon-stroke-width: 3rem;
-  margin-right: 0.25rem;
 }
 header ul {
   display: flex;
