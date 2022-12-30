@@ -62,7 +62,7 @@ const App = () => {
           <div className="container">
             <h2>{ text && text.hero.heading }</h2>
             <p><b>{ text && text.hero.paragraphBold }</b>{ text && text.hero.paragraph }</p>
-            <a href="mailto:ghbdtnghbdtn8@gmail.com" className="contact">{ text && text.header.contact }</a>
+            <a href="mailto:ghbdtnghbdtn8@gmail.com" className="contact">{ text && text.hero.contact }</a>
           </div>
           <a href="#about" className="arrow-down"><img src="/images/arrow_down_1.svg" alt="" /></a>
         </section>
