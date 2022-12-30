@@ -1,11 +1,19 @@
 import { useEffect } from "react"
 
-const Footer = () => {
+const Footer = ({ footer }) => {
   useEffect(()=>{
+    // close language select menu on outside click
     document.addEventListener("click", (e) => {
       const label = document.querySelector('footer .languages label')
       const input = document.querySelector('footer .languages input')
       if(!label.contains(e.target) && !input.contains(e.target)) input.checked = false
+    })
+    // change language onclick event
+    document.querySelectorAll('footer .languages .lang').forEach(lang => {
+      lang.addEventListener("click", (e)=>{
+        localStorage.setItem('lang', e.target.dataset.lang)
+        window.location.reload(false)
+      })
     })
   }, [])
 
@@ -16,18 +24,18 @@ const Footer = () => {
           <input type="checkbox" id="languages"/>
           <label htmlFor="languages">
             <ion-icon name="globe-outline"/>
-            <span>English</span>
+            <span>{ footer && footer.language }</span>
             <img src="/images/arrow_down_2.svg" />
           </label>
           <div className="list">
-              <a href="/">
+              <div className="lang" data-lang="en-US">
                 <div>English</div>
                 <div>English (US)</div>
-              </a>
-              <a href="/">
+              </div>
+              <div className="lang" data-lang="ru">
                 <div>Русский</div>
                 <div>Russian</div>
-              </a>
+              </div>
           </div>
         </div>
         <div className="links">

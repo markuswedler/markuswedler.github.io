@@ -59,8 +59,8 @@ footer{
       border-radius: .32rem;
       transition: $transition;
       padding: .25rem;
-      a{
-        display: block;
+      .lang{
+        cursor: pointer;
         min-width: 12rem;
         border-radius: .07rem;
         padding: .32rem .5rem;
@@ -68,6 +68,7 @@ footer{
           background: #F7F7F7;
         }
         div{
+          pointer-events: none;
           white-space: nowrap;
           line-height: 1.5;
           &:nth-child(1){

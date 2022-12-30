@@ -294,23 +294,24 @@ footer .languages .list {
   transition: 0.15s;
   padding: 0.25rem;
 }
-footer .languages .list a {
-  display: block;
+footer .languages .list .lang {
+  cursor: pointer;
   min-width: 12rem;
   border-radius: 0.07rem;
   padding: 0.32rem 0.5rem;
 }
-footer .languages .list a:hover {
+footer .languages .list .lang:hover {
   background: #F7F7F7;
 }
-footer .languages .list a div {
+footer .languages .list .lang div {
+  pointer-events: none;
   white-space: nowrap;
   line-height: 1.5;
 }
-footer .languages .list a div:nth-child(1) {
+footer .languages .list .lang div:nth-child(1) {
   font-weight: 600;
 }
-footer .languages .list a div:nth-child(2) {
+footer .languages .list .lang div:nth-child(2) {
   color: #4d4d4d;
 }
 footer .links {
@@ -542,9 +543,6 @@ section.works .works a .img {
 }
 section.works .works a p {
   margin-top: 0.75rem;
-}
-section.works .btn {
-  margin-top: 2.25rem;
 }
 
 * {

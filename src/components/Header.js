@@ -1,6 +1,6 @@
 import { useEffect } from "react"
 
-const Header = () => {
+const Header = ({ header }) => {
   // change header on scroll
   const changeHeader = () => {
     const wrapper = document.querySelector('header .wrapper')
@@ -27,10 +27,10 @@ const Header = () => {
         <input type="checkbox" id="menuBtn"/>
         <a href="/" className="logo">Sergei Mazhuga</a>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#works">Works</a></li>
-          <li><a href="mailto:ghbdtnghbdtn8@gmail.com" className="contact">Contact</a></li>
+          <li><a href="#">{ header && header.home }</a></li>
+          <li><a href="#about">{ header && header.about }</a></li>
+          <li><a href="#works">{ header && header.works }</a></li>
+          <li><a href="mailto:ghbdtnghbdtn8@gmail.com" className="contact">{ header && header.contact }</a></li>
         </ul>
         <label htmlFor="menuBtn"/>
       </div>

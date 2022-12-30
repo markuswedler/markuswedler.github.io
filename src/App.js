@@ -7,11 +7,15 @@ import Header from "./components/Header"
 import Footer from "./components/Footer"
 
 const App = () => {
+  const [isLoading, setIsLoading] = useState()
   const [text, setText] = useState()
 
-  let lang = navigator.language
-  if(!lang == 'de' && !lang == "ja" && !lang == "ru") lang = "en-US"
-  useFetch('/api/' + lang + '.json').then(data => setText(data))
+  if(localStorage.getItem('lang') != undefined) var lang = localStorage.getItem('lang')
+  else{
+    if(navigator.language == "ru") var lang = "ru"
+    else var lang = "en-US"
+  }
+  useFetch(lang).then(data => setText(data))
 
   useEffect(()=>{
     // set marginTop for main section
@@ -39,7 +43,7 @@ const App = () => {
 
   return (
     <>
-      <Header/>
+      <Header header={text && text.header} />
       <main className="wrapper">
         <section className="hero" id="home">
           <div className="pfp" style={{ backgroundImage: "url('/images/pfp.jpg')" }}/>
@@ -83,35 +87,23 @@ const App = () => {
         </section>
         <section className="works" id="works">
           <h2 className="title">{ text && text.works.title }</h2>
-          <div className="works">
-            {/* { text && Object.keys(text.works.cards).map(card => (
-              <a href=""></a>
-            )) } */}
-            <a href="https://amvtheatres.vercel.app">
-              <div className="img"  style={{ backgroundImage: "url('/images/works_logos/amv-theatres.svg')" }}/>
-              <h3>AMV Theatres</h3>
-              <p>Movie theatre website that was created for a univercity's course&nbsp;project</p>
-            </a>
-            <a href="https://markuswedler.github.io/optic-shop">
-              <div className="img"  style={{ backgroundImage: "url('/images/works_logos/optic-shop.svg')" }}/>
-              <h3>Optic Shop</h3>
-              <p>Optic Shop main page. Was inspired while scrolling through&nbsp;Instagram</p>
-            </a>
-            <a href="https://markuswedler.github.io/designer_portfolio">
-              <div className="img"  style={{ backgroundImage: "url('/images/works_logos/jeffross.svg')" }}/>
-              <h3>Jefferson</h3>
-              <p>Simple graphic designer and web developer&nbsp;portfolio</p>
-            </a>
+          <div className="works">{
+            text && Object.keys(text.works.cards).map(name => (
+              <a href={ "https://" + text.works.cards[name].url } key={name}>
+                <div className="img"  style={{ backgroundImage: "url('/images/works_logos/" + name + ".svg')" }}/>
+                <h3>{ text.works.cards[name].title }</h3>
+                <p>{ text.works.cards[name].paragraph }</p>
+              </a>
+            ))}
             <a href="https://markuswedler.github.io/test">
               <div className="img"/>
               <h3>Лабороторные</h3>
               <p></p>
             </a>
           </div>
-          {/* <a href="/" className="btn outline">All Works&nbsp;<ion-icon name="arrow-forward-outline"/></a> */}
         </section>
       </main>
-      <Footer/>
+      <Footer footer={ text && text.footer } />
     </>
   )
 }
