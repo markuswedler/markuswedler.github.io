@@ -12,7 +12,7 @@ const Footer = ({ footer }) => {
     document.querySelectorAll('footer .languages .lang').forEach(lang => {
       lang.addEventListener("click", (e)=>{
         localStorage.setItem('lang', e.target.dataset.lang)
-        window.location.reload('/')
+        window.location.replace('/')
       })
     })
   }, [])
