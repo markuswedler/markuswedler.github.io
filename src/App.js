@@ -25,7 +25,7 @@ const App = () => {
     // set links stops
     const sections = document.querySelectorAll('section')
     sections.forEach(section => {
-      if(section.classList.contains('about')) section.style.scrollMargin = document.querySelector('header').offsetHeight + 20 + "px"
+      if(section.classList.contains('about')) section.style.scrollMargin = document.querySelector('header').offsetHeight + 40 + "px"
       else section.style.scrollMargin = document.querySelector('header').offsetHeight + "px"
     })
     // add arrow down event listener
