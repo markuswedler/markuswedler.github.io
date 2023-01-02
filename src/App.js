@@ -69,7 +69,7 @@ const App = () => {
         <section className="about" id="about">
           <div className="container">
             <div>
-              <img src="/images/lego_brick.svg"/>
+              <img src="/images/directions.svg"/>
               <h2>{ text && text.about.heading }</h2>
               <p>{ text && text.about.paragraph }</p>
             </div>
