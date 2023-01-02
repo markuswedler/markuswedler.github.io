@@ -30,7 +30,7 @@ const Header = ({ header }) => {
           <li><a href="#">{ header && header.home }</a></li>
           <li><a href="#about">{ header && header.about }</a></li>
           <li><a href="#works">{ header && header.works }</a></li>
-          <li><a href="mailto:ghbdtnghbdtn8@gmail.com" className="contact">{ header && header.contact }</a></li>
+          <li><a href="mailto:ghbdtnghbdtn8@gmail.com">{ header && header.contact }</a></li>
         </ul>
         <label htmlFor="menuBtn"/>
       </div>

@@ -40,17 +40,16 @@
       @media (max-width: 769px){
         visibility: hidden;
         opacity: 0;
-        background: #fff;
+        background: $main;
         border: .0625rem solid rgb(#000, 0.1);
         border-radius: .32rem;
         position: fixed;
-        top: .5rem;
-        right: .72rem;
-        background: #fff;
+        top: calc(48px + .5rem);
+        right: 1.5rem;
         flex-flow: column;
         justify-content: center;
         transition: $transition;
-        padding: 1.9rem 0;
+        padding: 0 .2rem;
       }
       @media (min-width: 769px){
         align-items: center;
@@ -60,24 +59,18 @@
       li{
         width: 100%;
         display: flex;
-        justify-content: center;
         white-space: nowrap;
+        &:not(:last-child){
+          border-bottom: 1px solid rgb(#fff, .1);
+        }
         a{
           @media (max-width: 769px){
-            &:not(.contact){
-              padding: .75rem 3rem;
-            }
+            width: 100%;
+            color: #fff;
+            padding: .67rem 2rem .67rem 1rem;
           }
           @media (min-width: 769px){
             padding: .6rem .8rem;
-          }
-          &.contact{
-            @media (max-width: 769px){
-              margin-top: .4rem;
-            }
-            @media (min-width: 769px){
-              margin-left: .5rem;
-            }
           }
         }
       }
@@ -85,7 +78,6 @@
     input:checked ~ ul{
       visibility: visible;
       opacity: 1;
-      padding: 2rem 0;
     }
   
 
