@@ -170,44 +170,41 @@ header .logo {
   margin-left: -0.75rem;
   margin-right: auto;
 }
-header ul {
-  display: flex;
-}
 @media (max-width: 769px) {
   header ul {
+    background: #242424;
+    border-radius: 0.32rem;
+    transition: 0.15s;
+    padding: 0.25rem 0.75rem;
     visibility: hidden;
     opacity: 0;
-    background: #242424;
-    border: 0.0625rem solid rgba(0, 0, 0, 0.1);
-    border-radius: 0.32rem;
     position: fixed;
     top: calc(48px + 0.5rem);
     right: 1.5rem;
-    flex-flow: column;
-    justify-content: center;
-    transition: 0.15s;
-    padding: 0 0.2rem;
+  }
+  header ul li:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  header ul li a {
+    width: 100%;
+    color: #fff;
+    padding: 0.85rem 2rem 0.85rem 0.5rem;
   }
 }
 @media (min-width: 769px) {
   header ul {
+    display: flex;
     align-items: center;
     gap: 0.2rem;
   }
 }
 header ul li {
-  width: 100%;
   display: flex;
   white-space: nowrap;
 }
-header ul li:not(:last-child) {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-@media (max-width: 769px) {
-  header ul li a {
-    width: 100%;
-    color: #fff;
-    padding: 0.67rem 2rem 0.67rem 1rem;
+@media (min-width: 769px) {
+  header ul li {
+    border-bottom: none;
   }
 }
 @media (min-width: 769px) {
@@ -301,37 +298,40 @@ footer .languages label span {
 footer .languages label img {
   width: 0.5rem;
 }
-footer .languages .list {
+footer .languages ul {
+  background: #242424;
+  border-radius: 0.32rem;
+  transition: 0.15s;
+  padding: 0.25rem 0.75rem;
   opacity: 0;
   visibility: hidden;
   position: absolute;
   bottom: 100%;
   left: 10%;
-  background: #fff;
-  border: 0.0625rem solid rgba(0, 0, 0, 0.1);
-  border-radius: 0.32rem;
   transition: 0.15s;
-  padding: 0.25rem;
+  padding: 0.25rem 0.75rem;
 }
-footer .languages .list .lang {
+footer .languages ul li:not(:last-child) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+footer .languages ul li {
   cursor: pointer;
-  min-width: 12rem;
-  border-radius: 0.07rem;
-  padding: 0.32rem 0.5rem;
+  color: #fff;
+  padding: 0.85rem 2rem 0.85rem 0.5rem;
 }
-footer .languages .list .lang:hover {
-  background: #F7F7F7;
+footer .languages ul li {
+  padding: 0.7rem 2rem 0.7rem 0.5rem;
 }
-footer .languages .list .lang div {
+footer .languages ul li div {
   pointer-events: none;
   white-space: nowrap;
   line-height: 1.4;
 }
-footer .languages .list .lang div:nth-child(1) {
+footer .languages ul li div:nth-child(1) {
   font-weight: 600;
 }
-footer .languages .list .lang div:nth-child(2) {
-  color: #4d4d4d;
+footer .languages ul li div:nth-child(2) {
+  color: gray;
 }
 footer .links {
   display: flex;

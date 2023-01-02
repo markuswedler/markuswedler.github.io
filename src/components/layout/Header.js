@@ -14,10 +14,16 @@ const Header = ({ header }) => {
     // add scroll event listener
     window.addEventListener("scroll", changeHeader)
     // close menu on outside or link click
-    document.addEventListener("click", (e) => {
+    document.addEventListener("click", (e)=>{
       const label = document.querySelector('header label')
       const input = document.querySelector('header input')
       if(!label.contains(e.target) && !input.contains(e.target)) input.checked = false
+    })
+    document.addEventListener("touchstart", (e)=>{
+      const label = document.querySelector('header label')
+      const input = document.querySelector('header input')
+      const nav = document.querySelector('header ul')
+      if(!label.contains(e.target) && !input.contains(e.target) && !nav.contains(e.target)) input.checked = false
     })
   }, [])
 

@@ -38,37 +38,25 @@
 
     ul{
       @media (max-width: 769px){
+        @include list-a;
         visibility: hidden;
         opacity: 0;
-        background: $main;
-        border: .0625rem solid rgb(#000, 0.1);
-        border-radius: .32rem;
         position: fixed;
         top: calc(48px + .5rem);
         right: 1.5rem;
-        flex-flow: column;
-        justify-content: center;
-        transition: $transition;
-        padding: 0 .2rem;
       }
       @media (min-width: 769px){
+        display: flex;
         align-items: center;
         gap: .2rem;
       }
-      display: flex;
       li{
-        width: 100%;
         display: flex;
         white-space: nowrap;
-        &:not(:last-child){
-          border-bottom: 1px solid rgb(#fff, .1);
+        @media (min-width: 769px){
+          border-bottom: none;
         }
         a{
-          @media (max-width: 769px){
-            width: 100%;
-            color: #fff;
-            padding: .67rem 2rem .67rem 1rem;
-          }
           @media (min-width: 769px){
             padding: .6rem .8rem;
           }

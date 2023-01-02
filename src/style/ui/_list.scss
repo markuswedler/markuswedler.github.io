@@ -1,0 +1,25 @@
+@mixin list{
+  background: $main;
+  border-radius: .32rem;
+  transition: $transition;
+  padding: .25rem .75rem;
+  li:not(:last-child){ border-bottom: 1px solid rgb(#fff, .1); }
+}
+
+@mixin list-li{
+  @include list;
+  li{
+    cursor: pointer;
+    color: #fff;
+    padding: .85rem 2rem .85rem .5rem;
+  }
+}
+
+@mixin list-a{
+  @include list;
+  li a{
+    width: 100%;
+    color: #fff;
+    padding: .85rem 2rem .85rem .5rem;
+  }
+}

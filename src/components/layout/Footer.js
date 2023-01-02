@@ -8,6 +8,12 @@ const Footer = ({ footer }) => {
       const input = document.querySelector('footer .languages input')
       if(!label.contains(e.target) && !input.contains(e.target)) input.checked = false
     })
+    document.addEventListener("touchstart", (e) => {
+      const label = document.querySelector('footer .languages label')
+      const input = document.querySelector('footer .languages input')
+      const list = document.querySelector('footer .languages ul')
+      if(!label.contains(e.target) && !input.contains(e.target) && !list.contains(e.target)) input.checked = false
+    })
     // change language onclick event
     document.querySelectorAll('footer .languages .lang').forEach(lang => {
       lang.addEventListener("click", (e)=>{
@@ -27,16 +33,16 @@ const Footer = ({ footer }) => {
             <span>{ footer && footer.language }</span>
             <img src="/images/arrow_down_2.svg" />
           </label>
-          <div className="list">
-              <div className="lang" data-lang="en-US">
-                <div>English</div>
-                <div>English (US)</div>
-              </div>
-              <div className="lang" data-lang="ru">
-                <div>Русский</div>
-                <div>Russian</div>
-              </div>
-          </div>
+          <ul className="list">
+            <li className="lang" data-lang="en-US">
+              <div>English</div>
+              <div>English (US)</div>
+            </li>
+            <li className="lang" data-lang="ru">
+              <div>Русский</div>
+              <div>Russian</div>
+            </li>
+          </ul>
         </div>
         <div className="links">
           <a href=""><img src="/images/links_logos/github.svg"/></a>
