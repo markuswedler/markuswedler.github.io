@@ -59,23 +59,6 @@ p {
 }
 
 .btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #242424;
-  border-radius: 0.25rem;
-  font-weight: 700;
-  color: #fff;
-  background: #242424;
-  padding: 1rem 2rem;
-}
-.btn.outline {
-  background: none;
-  color: #242424;
-  border: 0.0625rem solid #a3a3a3;
-}
-
-a.contact {
   border-radius: 100vmax;
   background: #242424;
   color: #fff;
@@ -84,11 +67,11 @@ a.contact {
   padding: 0.75rem 1.25rem;
 }
 @media (min-width: 426px) {
-  a.contact {
+  .btn {
     padding: 0.6rem 1rem;
   }
 }
-a.contact:hover {
+.btn:hover {
   background: #3e3e3e;
 }
 
@@ -392,7 +375,7 @@ section.hero p {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
-section.hero a.contact {
+section.hero .btn {
   display: inline-block;
   padding: 0.75rem 1.25rem;
 }
