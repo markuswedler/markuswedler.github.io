@@ -259,6 +259,7 @@ footer > .wrapper {
 }
 footer p {
   font-size: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 footer .cont {
   display: flex;
