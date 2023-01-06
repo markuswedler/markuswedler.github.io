@@ -26,38 +26,32 @@ const Footer = ({ footer }) => {
   return (
     <footer className="wrapper">
       <div className="wrapper">
-        {
-          footer && "paragraph" in footer &&
-            <p>{ footer.paragraph }</p>
-        }
-        <div className="cont">
-          <div className="languages">
-            <input type="checkbox" id="languages"/>
-            <label htmlFor="languages">
-              <ion-icon name="globe-outline"/>
-              <span>{ footer && footer.language }</span>
-              <img src="/images/arrow_down_2.svg" />
-            </label>
-            <ul className="list">
-              <li className="lang" data-lang="en-US">
-                <div>English</div>
-                <div>English (US)</div>
-              </li>
-              <li className="lang" data-lang="ja">
-                <div>日本語</div>
-                <div>Japanese</div>
-              </li>
-              <li className="lang" data-lang="ru">
-                <div>Русский</div>
-                <div>Russian</div>
-              </li>
-            </ul>
-          </div>
-          <div className="links">
-            <a target="_blank" href="https://github.com/markuswedler"><img src="/images/links_logos/github.svg"/></a>
-            <a target="_blank" href="https://dev.to/markuswedler"><img src="/images/links_logos/devto.svg"/></a>
-            <a target="_blank" href="https://www.youtube.com/channel/UC07C6734bBfcNVL2Za8Y_-A"><img src="/images/links_logos/youtube.svg"/></a>
-          </div>
+        <div className="languages">
+          <input type="checkbox" id="languages"/>
+          <label htmlFor="languages">
+            <ion-icon name="globe-outline"/>
+            <span>{ footer && footer.language }</span>
+            <img src="/images/arrow_down_2.svg" />
+          </label>
+          <ul className="list">
+            <li className="lang" data-lang="en-US">
+              <div>English</div>
+              <div>English (US)</div>
+            </li>
+            <li className="lang" data-lang="ja">
+              <div>日本語</div>
+              <div>Japanese</div>
+            </li>
+            <li className="lang" data-lang="ru">
+              <div>Русский</div>
+              <div>Russian</div>
+            </li>
+          </ul>
+        </div>
+        <div className="links">
+          <a target="_blank" href="https://github.com/markuswedler"><img src="/images/links_logos/github.svg"/></a>
+          <a target="_blank" href="https://dev.to/markuswedler"><img src="/images/links_logos/devto.svg"/></a>
+          <a target="_blank" href="https://www.youtube.com/channel/UC07C6734bBfcNVL2Za8Y_-A"><img src="/images/links_logos/youtube.svg"/></a>
         </div>
       </div>
     </footer>

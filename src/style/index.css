@@ -253,38 +253,32 @@ header input:checked ~ label::after {
 }
 
 footer > .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   border-top: 0.0625rem solid rgba(0, 0, 0, 0.1);
   padding: 2rem 0;
   margin-top: 3rem;
 }
-footer p {
-  font-size: 0.75rem;
-  margin-bottom: 0.5rem;
-}
-footer .cont {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-footer .cont .languages {
+footer .languages {
   position: relative;
 }
-footer .cont .languages input[type=checkbox] {
+footer .languages input[type=checkbox] {
   position: absolute;
   opacity: 0;
   pointer-events: none;
 }
-footer .cont .languages input[type=checkbox]:focus ~ label {
+footer .languages input[type=checkbox]:focus ~ label {
   background: none;
 }
-footer .cont .languages input[type=checkbox]:checked ~ .list {
+footer .languages input[type=checkbox]:checked ~ .list {
   opacity: 1;
   visibility: visible;
 }
-footer .cont .languages input[type=checkbox]:checked ~ label {
+footer .languages input[type=checkbox]:checked ~ label {
   background: #F7F7F7;
 }
-footer .cont .languages label {
+footer .languages label {
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -293,19 +287,19 @@ footer .cont .languages label {
   padding: 0.6rem 0.8rem;
   margin-left: -0.8rem;
 }
-footer .cont .languages label:hover {
+footer .languages label:hover {
   background: #F7F7F7;
 }
-footer .cont .languages label ion-icon {
+footer .languages label ion-icon {
   --ionicon-stroke-width: 2.7rem;
 }
-footer .cont .languages label span {
+footer .languages label span {
   font-weight: 600;
 }
-footer .cont .languages label img {
+footer .languages label img {
   width: 0.5rem;
 }
-footer .cont .languages ul {
+footer .languages ul {
   background: #242424;
   border-radius: 0.32rem;
   transition: 0.15s;
@@ -318,37 +312,37 @@ footer .cont .languages ul {
   transition: 0.15s;
   padding: 0.25rem 0.75rem;
 }
-footer .cont .languages ul li:not(:last-child) {
+footer .languages ul li:not(:last-child) {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-footer .cont .languages ul li {
+footer .languages ul li {
   cursor: pointer;
   color: #fff;
   padding: 0.85rem 1rem 0.85rem 0.5rem;
 }
-footer .cont .languages ul li {
+footer .languages ul li {
   padding: 0.6rem 2rem 0.6rem 0.5rem;
 }
-footer .cont .languages ul li div {
+footer .languages ul li div {
   pointer-events: none;
   white-space: nowrap;
   line-height: 1.4;
 }
-footer .cont .languages ul li div:nth-child(1) {
+footer .languages ul li div:nth-child(1) {
   font-weight: 600;
 }
-footer .cont .languages ul li div:nth-child(2) {
+footer .languages ul li div:nth-child(2) {
   color: gray;
 }
-footer .cont .links {
+footer .links {
   display: flex;
   gap: 1rem;
 }
-footer .cont .links a {
+footer .links a {
   display: flex;
   align-items: center;
 }
-footer .cont .links img {
+footer .links img {
   width: 1rem;
 }
 
