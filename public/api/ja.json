@@ -12,8 +12,8 @@
     "contact": "お問い合わせ"
   },
   "about": {
-    "heading": "Where it all starts",
-    "paragraph": "Loving playing with lego since childhood suddenly I found out about web developing and understood that it's not just but much more than creating something from different shapes. That's how love for teamwork and helping people achieve their goals came from childhood hobby."
+    "heading": "起点",
+    "paragraph": "幼少からレゴで遊ぶのが好きだった私は。ある日突然web開発の世界に入り。さまざまな形から何かを生み出すということは、ただそれだけでなくもっと複雑だということを理解しました。"
   },
   "works": {
     "title": "作品",
@@ -21,17 +21,17 @@
       "amv-theatres": {
         "url": "amvtheatres.vercel.app",
         "title": "AMV Theatres",
-        "paragraph": "Movie theatre website that was created for a univercity's course project"
+        "paragraph": "大学の授業企画で作った映画館のサイト"
       },
       "optic-shop": {
         "url": "markuswedler.github.io/optic-shop",
         "title": "Optic Shop",
-        "paragraph": "Optic Shop main page. Was inspired while scrolling through Instagram"
+        "paragraph": "オプティックショップのメインページ。Instagramを見ている時に得たインスピレーションを元に"
       },
       "jeffross": {
         "url": "markuswedler.github.io/designer_portfolio",
         "title": "Jefferson",
-        "paragraph": "Simple graphic designer and web developer portfolio"
+        "paragraph": "シンプルなグラフィック デザイナーとweb開発者のポートフォリオ"
       }
     }
   },
