@@ -22,7 +22,7 @@ const Works = ({ works }) => {
         ))}
         <a href="https://markuswedler.github.io/test">
           <div className="img"/>
-          <h3>Лабороторные</h3>
+          <h3>Лабораторные</h3>
           <p></p>
         </a>
       </div>

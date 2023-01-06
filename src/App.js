@@ -32,7 +32,7 @@ const App = () => {
   const hideLoader = () => {
     const loader = document.querySelector('.loader')
     setTimeout(()=>{
-      loader.style.transition = ".3s"
+      loader.style.transition = ".5s"
       loader.style.opacity = 0
       loader.style.pointerEvents = "none"
     }, 200)

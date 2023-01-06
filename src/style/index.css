@@ -107,7 +107,7 @@ main.wrapper {
   left: 50%;
   width: 50px;
   height: 50px;
-  border: 3px solid #e6e6e6;
+  border: 2px solid transparent;
   border-top-color: #242424;
   border-radius: 50%;
   -webkit-animation: 1s loader linear infinite;
@@ -162,6 +162,7 @@ header input {
   display: none;
 }
 header .logo {
+  visibility: hidden;
   display: flex;
   align-items: center;
   font-family: sans-serif;
@@ -188,7 +189,7 @@ header .logo {
   header ul li a {
     width: 100%;
     color: #fff;
-    padding: 0.85rem 2rem 0.85rem 0.5rem;
+    padding: 0.85rem 1rem 0.85rem 0.5rem;
   }
 }
 @media (min-width: 769px) {
@@ -317,10 +318,10 @@ footer .languages ul li:not(:last-child) {
 footer .languages ul li {
   cursor: pointer;
   color: #fff;
-  padding: 0.85rem 2rem 0.85rem 0.5rem;
+  padding: 0.85rem 1rem 0.85rem 0.5rem;
 }
 footer .languages ul li {
-  padding: 0.7rem 2rem 0.7rem 0.5rem;
+  padding: 0.6rem 2rem 0.6rem 0.5rem;
 }
 footer .languages ul li div {
   pointer-events: none;
