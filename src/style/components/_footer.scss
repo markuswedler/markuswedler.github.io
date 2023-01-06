@@ -1,93 +1,100 @@
 footer{
   & > .wrapper{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     border-top: .0625rem solid rgb(#000, .1);
     padding: 2rem 0;
     margin-top: 3rem;
   }
 
-  .languages{
-    position: relative;
+  p{
+    font-size: .75rem;
+  }
 
-    input[type=checkbox]{
-      position: absolute;
-      opacity: 0;
-      pointer-events: none;
-      &:focus{
-        ~ label{
-          background: none;
+  .cont{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .languages{
+      position: relative;
+  
+      input[type=checkbox]{
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+        &:focus{
+          ~ label{
+            background: none;
+          }
+        }
+        &:checked{
+          ~ .list{
+            opacity: 1;
+            visibility: visible;
+          }
+          ~ label{
+            background: #F7F7F7;
+          }
         }
       }
-      &:checked{
-        ~ .list{
-          opacity: 1;
-          visibility: visible;
+    
+      label{
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: .25rem;
+        border-radius: .2rem;
+        padding: .6rem .8rem;
+        margin-left: -0.8rem;
+        &:hover{
+          background: $light;
         }
-        ~ label{
-          background: #F7F7F7;
+        ion-icon{
+          --ionicon-stroke-width: 2.7rem;
+        }
+        span{
+          font-weight: 600;
+        }
+        img{
+          width: .5rem;
+        }
+      }
+  
+      ul{
+        @include list-li;
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        bottom: 100%;
+        left: 10%;
+        transition: $transition;
+        padding: .25rem .75rem;
+        li{
+          padding: .6rem 2rem .6rem .5rem;
+          div{
+            pointer-events: none;
+            white-space: nowrap;
+            line-height: 1.4;
+            &:nth-child(1){
+              font-weight: 600;
+            }
+            &:nth-child(2){
+              color: lighten($text, 20);
+            }
+          }
         }
       }
     }
   
-    label{
-      cursor: pointer;
+    .links{
       display: flex;
-      align-items: center;
-      gap: .25rem;
-      border-radius: .2rem;
-      padding: .6rem .8rem;
-      margin-left: -0.8rem;
-      &:hover{
-        background: $light;
-      }
-      ion-icon{
-        --ionicon-stroke-width: 2.7rem;
-      }
-      span{
-        font-weight: 600;
+      gap: 1rem;
+      a{
+        display: flex;
+        align-items: center;
       }
       img{
-        width: .5rem;
+        width: 1rem;
       }
-    }
-
-    ul{
-      @include list-li;
-      opacity: 0;
-      visibility: hidden;
-      position: absolute;
-      bottom: 100%;
-      left: 10%;
-      transition: $transition;
-      padding: .25rem .75rem;
-      li{
-        padding: .6rem 2rem .6rem .5rem;
-        div{
-          pointer-events: none;
-          white-space: nowrap;
-          line-height: 1.4;
-          &:nth-child(1){
-            font-weight: 600;
-          }
-          &:nth-child(2){
-            color: lighten($text, 20);
-          }
-        }
-      }
-    }
-  }
-
-  .links{
-    display: flex;
-    gap: 1rem;
-    a{
-      display: flex;
-      align-items: center;
-    }
-    img{
-      width: 1rem;
     }
   }
 }

@@ -23,7 +23,7 @@ a {
 }
 
 .logo, h1, h2, h3, h4, h5, h6 {
-  font-family: "Rubik";
+  font-family: "Rubik", sans-serif;
   color: #242424;
 }
 
@@ -253,32 +253,37 @@ header input:checked ~ label::after {
 }
 
 footer > .wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   border-top: 0.0625rem solid rgba(0, 0, 0, 0.1);
   padding: 2rem 0;
   margin-top: 3rem;
 }
-footer .languages {
+footer p {
+  font-size: 0.75rem;
+}
+footer .cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .cont .languages {
   position: relative;
 }
-footer .languages input[type=checkbox] {
+footer .cont .languages input[type=checkbox] {
   position: absolute;
   opacity: 0;
   pointer-events: none;
 }
-footer .languages input[type=checkbox]:focus ~ label {
+footer .cont .languages input[type=checkbox]:focus ~ label {
   background: none;
 }
-footer .languages input[type=checkbox]:checked ~ .list {
+footer .cont .languages input[type=checkbox]:checked ~ .list {
   opacity: 1;
   visibility: visible;
 }
-footer .languages input[type=checkbox]:checked ~ label {
+footer .cont .languages input[type=checkbox]:checked ~ label {
   background: #F7F7F7;
 }
-footer .languages label {
+footer .cont .languages label {
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -287,19 +292,19 @@ footer .languages label {
   padding: 0.6rem 0.8rem;
   margin-left: -0.8rem;
 }
-footer .languages label:hover {
+footer .cont .languages label:hover {
   background: #F7F7F7;
 }
-footer .languages label ion-icon {
+footer .cont .languages label ion-icon {
   --ionicon-stroke-width: 2.7rem;
 }
-footer .languages label span {
+footer .cont .languages label span {
   font-weight: 600;
 }
-footer .languages label img {
+footer .cont .languages label img {
   width: 0.5rem;
 }
-footer .languages ul {
+footer .cont .languages ul {
   background: #242424;
   border-radius: 0.32rem;
   transition: 0.15s;
@@ -312,37 +317,37 @@ footer .languages ul {
   transition: 0.15s;
   padding: 0.25rem 0.75rem;
 }
-footer .languages ul li:not(:last-child) {
+footer .cont .languages ul li:not(:last-child) {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-footer .languages ul li {
+footer .cont .languages ul li {
   cursor: pointer;
   color: #fff;
   padding: 0.85rem 1rem 0.85rem 0.5rem;
 }
-footer .languages ul li {
+footer .cont .languages ul li {
   padding: 0.6rem 2rem 0.6rem 0.5rem;
 }
-footer .languages ul li div {
+footer .cont .languages ul li div {
   pointer-events: none;
   white-space: nowrap;
   line-height: 1.4;
 }
-footer .languages ul li div:nth-child(1) {
+footer .cont .languages ul li div:nth-child(1) {
   font-weight: 600;
 }
-footer .languages ul li div:nth-child(2) {
+footer .cont .languages ul li div:nth-child(2) {
   color: gray;
 }
-footer .links {
+footer .cont .links {
   display: flex;
   gap: 1rem;
 }
-footer .links a {
+footer .cont .links a {
   display: flex;
   align-items: center;
 }
-footer .links img {
+footer .cont .links img {
   width: 1rem;
 }
 
