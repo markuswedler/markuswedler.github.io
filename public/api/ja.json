@@ -2,13 +2,13 @@
   "header": {
     "home": "ホーム",
     "about": "私について",
-    "works": "事業",
+    "works": "作品",
     "contact": "お問い合わせ"
   },
   "hero": {
     "heading": "どうも、セルゲイです",
-    "paragraphBold": "A web developer currently based in Vladivostok. ",
-    "paragraph": "Though I'm still a studen, it doesn't stop me from chasing my dreams of being a professional web developer.",
+    "paragraphBold": "",
+    "paragraph": "現在ウラジオストクに拠点を置いているweb開発者です。私わまだ学生ですが、プロのweb開発者になるという夢を追いかけずにはいられないのです。その間いくつかのwebサイトを作成し、開発してきました。",
     "contact": "お問い合わせ"
   },
   "about": {
@@ -16,7 +16,7 @@
     "paragraph": "Loving playing with lego since childhood suddenly I found out about web developing and understood that it's not just but much more than creating something from different shapes. That's how love for teamwork and helping people achieve their goals came from childhood hobby."
   },
   "works": {
-    "title": "事業",
+    "title": "作品",
     "cards": {
       "amv-theatres": {
         "url": "amvtheatres.vercel.app",
