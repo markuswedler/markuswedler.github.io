@@ -16,6 +16,7 @@ const App = () => {
 
   // get localization
   if(localStorage.getItem('lang')) var lang = localStorage.getItem('lang')
+  else if(navigator.language == "ja") var lang = "ja"
   else if(navigator.language == "ru") var lang = "ru"
   else var lang = "en-US"
   useFetch(lang).then(data => setText(data))
