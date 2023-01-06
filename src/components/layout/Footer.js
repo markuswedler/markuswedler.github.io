@@ -54,9 +54,9 @@ const Footer = ({ footer }) => {
             </ul>
           </div>
           <div className="links">
-            <a href="https://github.com/markuswedler"><img src="/images/links_logos/github.svg"/></a>
-            <a href="https://dev.to/markuswedler"><img src="/images/links_logos/devto.svg"/></a>
-            <a href="https://www.youtube.com/channel/UC07C6734bBfcNVL2Za8Y_-A"><img src="/images/links_logos/youtube.svg"/></a>
+            <a target="_blank" href="https://github.com/markuswedler"><img src="/images/links_logos/github.svg"/></a>
+            <a target="_blank" href="https://dev.to/markuswedler"><img src="/images/links_logos/devto.svg"/></a>
+            <a target="_blank" href="https://www.youtube.com/channel/UC07C6734bBfcNVL2Za8Y_-A"><img src="/images/links_logos/youtube.svg"/></a>
           </div>
         </div>
       </div>
