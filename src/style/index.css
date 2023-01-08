@@ -119,6 +119,7 @@ header {
 }
 header > .wrapper {
   display: flex;
+  align-items: center;
   border-bottom: 0.0625rem solid transparent;
   transition: 0.15s;
 }
@@ -136,13 +137,6 @@ header input {
   display: none;
 }
 header .logo {
-  visibility: hidden;
-  display: flex;
-  align-items: center;
-  font-family: sans-serif;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-  margin-left: -0.75rem;
   margin-right: auto;
 }
 @media (max-width: 769px) {

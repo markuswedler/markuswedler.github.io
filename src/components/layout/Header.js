@@ -30,7 +30,7 @@ const Header = ({ header }) => {
   return (
     <header className="wrapper">
       <div className="wrapper">
-        <a href="/" className="logo">Sergei Mazhuga</a>
+        <a href="/" className="logo">Sergei</a>
         <input type="checkbox" id="menuBtn"/>
         <ul>
           <li><a href="#"><div>{ header && header.home }</div></a></li>
