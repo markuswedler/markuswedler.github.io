@@ -63,25 +63,12 @@
             transition: $transition;
             padding: 0 .9rem;
             &:hover{
-              span{
-                &::after{ width: 100%; }
-              }
+              div{ background-size: 100% .1rem; }
             }
-            span{
-              position: relative;
-              display: block;
+            div{
+              background: linear-gradient(0deg, $main, $main) no-repeat bottom left / 0 2px;
+              transition: $transition;
               padding: .5rem 0;
-              &::after{
-                content: '';
-                position: absolute;
-                z-index: -1;
-                left: 0;
-                bottom: 0;
-                background: $main;
-                width: 0;
-                height: .1rem;
-                transition: $transition;
-              }
             }
           }
         }

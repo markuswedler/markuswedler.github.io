@@ -187,24 +187,13 @@ header ul li {
     transition: 0.15s;
     padding: 0 0.9rem;
   }
-  header ul li a:hover span::after {
-    width: 100%;
+  header ul li a:hover div {
+    background-size: 100% 0.1rem;
   }
-  header ul li a span {
-    position: relative;
-    display: block;
-    padding: 0.5rem 0;
-  }
-  header ul li a span::after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    left: 0;
-    bottom: 0;
-    background: #242424;
-    width: 0;
-    height: 0.1rem;
+  header ul li a div {
+    background: linear-gradient(0deg, #242424, #242424) no-repeat bottom left/0 2px;
     transition: 0.15s;
+    padding: 0.5rem 0;
   }
 }
 header input:checked ~ ul {
