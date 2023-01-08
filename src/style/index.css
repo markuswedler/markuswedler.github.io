@@ -444,19 +444,19 @@ section.about h2 {
   margin-top: 1.2rem;
   margin-bottom: 0.75rem;
 }
-section.about ul {
+section.about .skills {
   display: grid;
   gap: 1.25rem;
 }
 @media (max-width: 769px) {
-  section.about ul {
+  section.about .skills {
     padding-top: 2.5rem;
   }
 }
-section.about ul li {
+section.about .skills li {
   position: relative;
 }
-section.about ul li .percentage {
+section.about .skills li .percentage {
   position: absolute;
   bottom: 0.8125rem;
   transform: translateX(-50%);
@@ -466,7 +466,7 @@ section.about ul li .percentage {
   border-radius: 0.3rem;
   padding: 0.5rem;
 }
-section.about ul li .percentage::after {
+section.about .skills li .percentage::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -475,32 +475,31 @@ section.about ul li .percentage::after {
   border: 0.1875rem solid transparent;
   border-top-color: #242424;
 }
-section.about ul li .progress-bar {
+section.about .skills li .progress-bar {
   position: relative;
   height: 10px;
   background: #f0f0f0;
   border-radius: 100vmax;
   margin-top: 0.375rem;
 }
-section.about ul li .progress-bar .progress {
+section.about .skills li .progress-bar .progress {
   background: #242424;
   border-top-left-radius: 100vmax;
   border-bottom-left-radius: 100vmax;
   height: 100%;
 }
 @media (prefers-reduced-motion) {
-  section.about ul li .percentage, section.about ul li .progress {
+  section.about .skills li .percentage, section.about .skills li .progress {
     transition: 0;
   }
 }
-section.about ul li .percentage, section.about ul li .progress {
+section.about .skills li .percentage, section.about .skills li .progress {
   transition: 0.3s;
-  transition-delay: 0.15s;
 }
-section.about ul li.toAnimate .percentage {
+section.about .skills li.toAnimate .percentage {
   left: 0 !important;
 }
-section.about ul li.toAnimate .progress {
+section.about .skills li.toAnimate .progress {
   width: 0 !important;
 }
 

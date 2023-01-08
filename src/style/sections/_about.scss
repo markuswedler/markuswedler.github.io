@@ -35,7 +35,7 @@ section.about{
     margin-bottom: .75rem;
   }
 
-  ul{
+  .skills{
     display: grid;
     gap: 1.25rem;
     @media (max-width: 769px){ padding-top: 2.5rem; }
@@ -78,10 +78,7 @@ section.about{
         .percentage, .progress{ transition: 0; }
       }
       // observer animation
-      .percentage, .progress{
-        transition: $transition*2;
-        transition-delay: $transition;
-      }
+      .percentage, .progress{ transition: $transition*2; }
       &.toAnimate{
         .percentage{ left: 0 !important; }
         .progress{ width: 0 !important; }

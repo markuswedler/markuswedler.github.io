@@ -20,7 +20,7 @@ const About = ({ about }) => {
           <h2>{ about && about.heading }</h2>
           <p>{ about && about.paragraph }</p>
         </div>
-        <ul>
+        <ul className="skills">
           {
             skillsNames.map((skill, i) => (
               <li className="toAnimate" key={i}>
