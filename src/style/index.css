@@ -183,13 +183,27 @@ header ul li {
 }
 @media (min-width: 769px) {
   header ul li a {
+    position: relative;
     border-radius: 100vmax;
+    transition: 0.15s;
     padding: 0.6rem 0.9rem;
   }
-  header ul li a:hover {
+  header ul li a::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
     background: #242424;
-    color: #fff;
+    width: 0;
+    height: 100%;
     transition: 0.15s;
+  }
+  header ul li a:hover {
+    color: #fff;
+  }
+  header ul li a:hover::after {
+    width: 100%;
   }
 }
 header input:checked ~ ul {

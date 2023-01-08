@@ -59,12 +59,24 @@
         }
         a{
           @media (min-width: 769px){
+            position: relative;
             border-radius: 100vmax;
+            transition: $transition;
             padding: .6rem .9rem;
-            &:hover{
+            &::after{
+              content: '';
+              position: absolute;
+              z-index: -1;
+              left: 0;
+              top: 0;
               background: $main;
-              color: #fff;
+              width: 0;
+              height: 100%;
               transition: $transition;
+            }
+            &:hover{
+              color: #fff;
+              &::after{ width: 100%; }
             }
           }
         }
