@@ -43,6 +43,15 @@ const App = () => {
     }, 200)
   }
 
+  // observer
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) entry.target.classList.remove('toAnimate')
+    })
+  })
+  // elements to observe
+  document.querySelectorAll('.toAnimate').forEach(item => observer.observe(item))
+
   return (
     <>
       <div className="loader"/>

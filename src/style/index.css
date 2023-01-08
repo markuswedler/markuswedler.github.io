@@ -456,7 +456,17 @@ section.about ul {
 section.about ul li {
   position: relative;
 }
-section.about ul li span {
+section.about ul li .percentage, section.about ul li .progress {
+  transition: 0.3s;
+  transition-delay: 0.3s;
+}
+section.about ul li.toAnimate .percentage {
+  left: 0 !important;
+}
+section.about ul li.toAnimate .progress {
+  width: 0 !important;
+}
+section.about ul li .percentage {
   position: absolute;
   bottom: 0.8125rem;
   transform: translateX(-50%);
@@ -466,7 +476,7 @@ section.about ul li span {
   border-radius: 0.3rem;
   padding: 0.5rem;
 }
-section.about ul li span::after {
+section.about ul li .percentage::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -475,56 +485,18 @@ section.about ul li span::after {
   border: 0.1875rem solid transparent;
   border-top-color: #242424;
 }
-section.about ul li div {
+section.about ul li .progress-bar {
   position: relative;
   height: 10px;
   background: #f0f0f0;
   border-radius: 100vmax;
   margin-top: 0.375rem;
 }
-section.about ul li div::before {
-  content: "";
-  position: absolute;
+section.about ul li .progress-bar .progress {
   background: #242424;
   border-top-left-radius: 100vmax;
   border-bottom-left-radius: 100vmax;
   height: 100%;
-}
-section.about ul li:nth-child(1) span {
-  left: 97%;
-}
-section.about ul li:nth-child(1) span::before {
-  content: "97%";
-}
-section.about ul li:nth-child(1) div::before {
-  width: 97%;
-}
-section.about ul li:nth-child(2) span {
-  left: 98%;
-}
-section.about ul li:nth-child(2) span::before {
-  content: "98%";
-}
-section.about ul li:nth-child(2) div::before {
-  width: 98%;
-}
-section.about ul li:nth-child(3) span {
-  left: 56%;
-}
-section.about ul li:nth-child(3) span::before {
-  content: "56%";
-}
-section.about ul li:nth-child(3) div::before {
-  width: 56%;
-}
-section.about ul li:nth-child(4) span {
-  left: 76%;
-}
-section.about ul li:nth-child(4) span::before {
-  content: "76%";
-}
-section.about ul li:nth-child(4) div::before {
-  width: 76%;
 }
 
 section.works .works {

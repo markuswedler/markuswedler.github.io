@@ -41,7 +41,15 @@ section.about{
     @media (max-width: 769px){ padding-top: 2.5rem; }
     li{
       position: relative;
-      span{
+      .percentage, .progress{
+        transition: $transition*2;
+        transition-delay: $transition*2;
+      }
+      &.toAnimate{
+        .percentage{ left: 0 !important; }
+        .progress{ width: 0 !important; }
+      }
+      .percentage{
         position: absolute;
         bottom: 0.8125rem;
         transform: translateX(-50%);
@@ -60,40 +68,18 @@ section.about{
           border-top-color: $main;
         }
       }
-      div{
+      .progress-bar{
         position: relative;
         height: 10px;
         background: lighten($main, 80);
         border-radius: 100vmax;
         margin-top: .375rem;
-        &::before{
-          content: '';
-          position: absolute;
+        .progress{
           background: $main;
           border-top-left-radius: 100vmax;
           border-bottom-left-radius: 100vmax;
           height: 100%;
         }
-      }
-      &:nth-child(1){
-        span{ left: 97%; }
-        span::before{ content: '97%'; }
-        div::before{ width: 97%; }
-      }
-      &:nth-child(2){
-        span{ left: 98%; }
-        span::before{ content: '98%'; }
-        div::before{ width: 98%; }
-      }
-      &:nth-child(3){
-        span{ left: 56%; }
-        span::before{ content: '56%'; }
-        div::before{ width: 56%; }
-      }
-      &:nth-child(4){
-        span{ left: 76%; }
-        span::before{ content: '76%'; }
-        div::before{ width: 76%; }
       }
     }
   }
