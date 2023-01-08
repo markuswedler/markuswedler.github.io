@@ -24,6 +24,8 @@ footer{
         ~ .list{
           opacity: 1;
           visibility: visible;
+          transform: unset;
+          transition: $transition;
         }
         ~ label{
           background: #F7F7F7;
@@ -60,7 +62,9 @@ footer{
       position: absolute;
       bottom: 100%;
       left: 10%;
-      transition: $transition;
+      transform-origin: left bottom;
+      transform: scale(.98);
+      transition: 0s;
       padding: .25rem .75rem;
       li{
         padding: .6rem 2rem .6rem .5rem;

@@ -1,7 +1,5 @@
 // react
 import { useEffect, useState } from "react"
-// hooks
-import useFetch from "./hooks/useFetch"
 // layout components
 import Header from "./components/layout/Header"
 import Footer from "./components/layout/Footer"
@@ -16,10 +14,16 @@ const App = () => {
 
   // get localization
   if(localStorage.getItem('lang')) var lang = localStorage.getItem('lang')
+  else if(navigator.language == "de") var lang = "de"
   else if(navigator.language == "ja") var lang = "ja"
   else if(navigator.language == "ru") var lang = "ru"
   else var lang = "en-US"
-  useFetch(lang).then(data => setText(data))
+  // get text
+  useEffect(()=>{
+    fetch('/api/' + lang + '.json')
+      .then(res => { return res.json() })
+      .then(data => setText(data))
+  }, [lang])
 
   useEffect(()=>{
     // hide loader

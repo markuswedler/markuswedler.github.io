@@ -27,15 +27,6 @@ a {
   color: #242424;
 }
 
-h1 {
-  font-size: 3rem;
-}
-@media (max-width: 769px) {
-  h1 {
-    font-size: 2rem;
-  }
-}
-
 h2 {
   font-size: 1.875rem;
 }
@@ -56,23 +47,6 @@ p {
   text-decoration: none;
   font-weight: 700;
   font-size: 1.25rem;
-}
-
-.btn {
-  border-radius: 100vmax;
-  background: #242424;
-  color: #fff;
-  font-weight: 500;
-  transition: 0.15s;
-  padding: 0.75rem 1.25rem;
-}
-@media (min-width: 426px) {
-  .btn {
-    padding: 0.6rem 1rem;
-  }
-}
-.btn:hover {
-  background: #3e3e3e;
 }
 
 .wrapper {
@@ -196,7 +170,6 @@ header .logo {
   header ul {
     display: flex;
     align-items: center;
-    gap: 0.2rem;
   }
 }
 header ul li {
@@ -210,7 +183,13 @@ header ul li {
 }
 @media (min-width: 769px) {
   header ul li a {
-    padding: 0.6rem 0.8rem;
+    border-radius: 100vmax;
+    padding: 0.6rem 0.9rem;
+  }
+  header ul li a:hover {
+    background: #242424;
+    color: #fff;
+    transition: 0.15s;
   }
 }
 header input:checked ~ ul {
@@ -274,6 +253,8 @@ footer .languages input[type=checkbox]:focus ~ label {
 footer .languages input[type=checkbox]:checked ~ .list {
   opacity: 1;
   visibility: visible;
+  transform: unset;
+  transition: 0.15s;
 }
 footer .languages input[type=checkbox]:checked ~ label {
   background: #F7F7F7;
@@ -309,7 +290,9 @@ footer .languages ul {
   position: absolute;
   bottom: 100%;
   left: 10%;
-  transition: 0.15s;
+  transform-origin: left bottom;
+  transform: scale(0.98);
+  transition: 0s;
   padding: 0.25rem 0.75rem;
 }
 footer .languages ul li:not(:last-child) {
@@ -377,8 +360,16 @@ section.hero p {
   padding-bottom: 0.5rem;
 }
 section.hero .btn {
+  border-radius: 100vmax;
+  background: #242424;
+  color: #fff;
+  font-weight: 500;
+  transition: 0.15s;
   display: inline-block;
   padding: 0.75rem 1.25rem;
+}
+section.hero .btn:hover {
+  background: #434343;
 }
 section.hero .arrow-down {
   position: absolute;
@@ -551,6 +542,11 @@ section.works .works a {
   border: 0.0625rem solid #ccc;
   border-radius: 2rem;
   padding: 2rem;
+  transition: 0.15s;
+}
+section.works .works a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(170, 170, 170, 0.5);
 }
 section.works .works a .img {
   width: 5rem;

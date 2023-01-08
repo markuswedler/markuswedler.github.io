@@ -17,12 +17,6 @@ a{
   font-family: "Rubik", sans-serif;
   color: $main;
 }
-h1{
-  @media (max-width: 769px){
-    font-size: 2rem;
-  }
-  font-size: 3rem;
-}
 h2{
   font-size: 1.875rem;
 }

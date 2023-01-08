@@ -24,7 +24,7 @@ const Hero = ({ hero }) => {
       <div className="pfp" style={{ backgroundImage: "url('/images/pfp.jpg')" }}/>
       <div className="container">
         <h2>{ hero && hero.heading }</h2>
-        <p><b>{ hero && hero.paragraphBold }</b>{ hero && hero.paragraph }</p>
+        <p>{ hero && hero.paragraph }</p>
         <a href="mailto:ghbdtnghbdtn8@gmail.com" className="btn">{ hero && hero.contact }</a>
       </div>
       <a href="#about" className="arrow-down"><img src="/images/arrow_down_1.svg" alt="" /></a>

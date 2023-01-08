@@ -38,6 +38,10 @@ const Footer = ({ footer }) => {
               <div>English</div>
               <div>English (US)</div>
             </li>
+            <li className="lang" data-lang="de">
+              <div>Deutsch</div>
+              <div>German</div>
+            </li>
             <li className="lang" data-lang="ja">
               <div>日本語</div>
               <div>Japanese</div>

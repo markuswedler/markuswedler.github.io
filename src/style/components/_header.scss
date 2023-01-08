@@ -49,7 +49,7 @@
       @media (min-width: 769px){
         display: flex;
         align-items: center;
-        gap: .2rem;
+        // gap: .2rem;
       }
       li{
         display: flex;
@@ -59,7 +59,13 @@
         }
         a{
           @media (min-width: 769px){
-            padding: .6rem .8rem;
+            border-radius: 100vmax;
+            padding: .6rem .9rem;
+            &:hover{
+              background: $main;
+              color: #fff;
+              transition: $transition;
+            }
           }
         }
       }
