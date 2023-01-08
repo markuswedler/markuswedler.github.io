@@ -176,6 +176,7 @@ header ul li {
 }
 @media (min-width: 769px) {
   header ul li a {
+    position: relative;
     transition: 0.15s;
     padding: 0 0.9rem;
   }
@@ -350,6 +351,11 @@ section.hero .pfp {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 2rem;
+  }
+}
+@media (min-width: 769px) {
+  section.hero .pfp {
+    max-width: 38rem;
   }
 }
 section.hero p {

@@ -1,8 +1,8 @@
 import { useEffect } from "react"
 
 const Header = ({ header }) => {
-  // change header on scroll
   const changeHeader = () => {
+    // change border-bottom bg
     const wrapper = document.querySelector('header .wrapper')
     if(window.scrollY > 0) wrapper.style.borderBottomColor = "rgba(0, 0, 0, .1)"
     else wrapper.style.borderBottomColor = "transparent"

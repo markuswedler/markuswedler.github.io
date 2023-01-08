@@ -51,6 +51,7 @@
         }
         a{
           @media (min-width: 769px){
+            position: relative;
             transition: $transition;
             padding: 0 .9rem;
             &:hover{

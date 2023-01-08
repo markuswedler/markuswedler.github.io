@@ -13,6 +13,9 @@ section.hero{
       margin-right: auto;
       margin-bottom: 2rem;
     }
+    @media (min-width: 769px){
+      max-width: 38rem;
+    }
     width: 100%;
     aspect-ratio: 1/1;
     background-size: contain;
