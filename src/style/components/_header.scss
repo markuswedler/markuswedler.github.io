@@ -48,24 +48,22 @@
       }
       @media (min-width: 769px){
         display: flex;
-        align-items: center;
-        // gap: .2rem;
+        margin-right: -0.9rem;
       }
       li{
-        display: flex;
-        white-space: nowrap;
         @media (min-width: 769px){
           border-bottom: none;
         }
         a{
           @media (min-width: 769px){
-            border-radius: 100vmax;
+            display: block;
             transition: $transition;
             padding: 0 .9rem;
             &:hover{
               div{ background-size: 100% .1rem; }
             }
             div{
+              white-space: nowrap;
               background: linear-gradient(0deg, $main, $main) no-repeat bottom left / 0 2px;
               transition: $transition;
               padding: .5rem 0;
