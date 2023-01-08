@@ -373,7 +373,7 @@ section.hero .btn:hover .text {
   transform: translateX(-2rem);
 }
 section.hero .btn:hover .hover-cont {
-  right: 0;
+  left: 0;
 }
 section.hero .btn .text {
   transition: 0.15s;
@@ -385,7 +385,7 @@ section.hero .btn .hover-cont {
   place-items: center;
   position: absolute;
   top: 0;
-  right: -100%;
+  left: 100%;
   height: 100%;
   width: 100%;
   border-radius: 100vmax;
