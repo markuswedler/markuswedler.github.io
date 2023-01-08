@@ -7,7 +7,6 @@
   },
   "hero": {
     "heading": "どうも、セルゲイです",
-    "paragraphBold": "",
     "paragraph": "現在ウラジオストクに拠点を置いているweb開発者です。私わまだ学生ですが、プロのweb開発者になるという夢を追いかけずにはいられないのです。その間いくつかのwebサイトを作成し、開発してきました。",
     "contact": "お問い合わせ"
   },
@@ -26,7 +25,7 @@
       "optic-shop": {
         "url": "markuswedler.github.io/optic-shop",
         "title": "Optic Shop",
-        "paragraph": "オプティックショップのメインページ。Instagramを見ている時に得たインスピレーションを元に"
+        "paragraph": "オプティックショップのメインページ。"
       },
       "jeffross": {
         "url": "markuswedler.github.io/designer_portfolio",
