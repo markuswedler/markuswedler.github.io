@@ -172,6 +172,9 @@ header .logo {
     margin-right: -0.9rem;
   }
 }
+header ul li {
+  display: flex;
+}
 @media (min-width: 769px) {
   header ul li {
     border-bottom: none;
@@ -179,7 +182,6 @@ header .logo {
 }
 @media (min-width: 769px) {
   header ul li a {
-    display: block;
     transition: 0.15s;
     padding: 0 0.9rem;
   }

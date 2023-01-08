@@ -51,12 +51,12 @@
         margin-right: -0.9rem;
       }
       li{
+        display: flex;
         @media (min-width: 769px){
           border-bottom: none;
         }
         a{
           @media (min-width: 769px){
-            display: block;
             transition: $transition;
             padding: 0 .9rem;
             &:hover{
