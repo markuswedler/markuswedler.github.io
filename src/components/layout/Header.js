@@ -33,10 +33,10 @@ const Header = ({ header }) => {
         <a href="/" className="logo">Sergei Mazhuga</a>
         <input type="checkbox" id="menuBtn"/>
         <ul>
-          <li><a href="#">{ header && header.home }</a></li>
-          <li><a href="#about">{ header && header.about }</a></li>
-          <li><a href="#works">{ header && header.works }</a></li>
-          <li><a href="mailto:ghbdtnghbdtn8@gmail.com">{ header && header.contact }</a></li>
+          <li><a href="#"><span>{ header && header.home }</span></a></li>
+          <li><a href="#about"><span>{ header && header.about }</span></a></li>
+          <li><a href="#works"><span>{ header && header.works }</span></a></li>
+          <li><a href="mailto:ghbdtnghbdtn8@gmail.com"><span>{ header && header.contact }</span></a></li>
         </ul>
         <label htmlFor="menuBtn"/>
       </div>
