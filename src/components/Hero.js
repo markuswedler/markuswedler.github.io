@@ -25,7 +25,10 @@ const Hero = ({ hero }) => {
       <div className="container">
         <h2>{ hero && hero.heading }</h2>
         <p>{ hero && hero.paragraph }</p>
-        <a href="mailto:ghbdtnghbdtn8@gmail.com" className="btn">{ hero && hero.contact }</a>
+        <a href="mailto:ghbdtnghbdtn8@gmail.com" className="btn">
+          <div className="text">{ hero && hero.contact }</div>
+          <div className="hover-cont"><ion-icon name="mail-outline"/></div>
+        </a>
       </div>
       <a href="#about" className="arrow-down"><img src="/images/arrow_down_1.svg" alt="" /></a>
     </section>

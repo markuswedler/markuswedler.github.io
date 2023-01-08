@@ -28,15 +28,37 @@ section.hero{
     padding-bottom: .5rem;
   }
   .btn{
+    overflow: hidden;
+    display: inline-flex;
+    position: relative;
     border-radius: 100vmax;
     background: $main;
     color: #fff;
     font-weight: 500;
     transition: $transition;
-    display: inline-block;
-    padding: .75rem 1.25rem;
     &:hover{
+      .text{
+        transform: translateX(-2rem);
+      }
+      .hover-cont{
+        right: 0;
+      }
+    }
+    .text{
+      transition: $transition;
+      padding: .75rem 1.25rem;
+    }
+    .hover-cont{
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      position: absolute;
+      top: 0;
+      right: -100%;
+      height: 100%;
+      aspect-ratio: 1/1;
       background: lighten($main, 12);
+      transition: $transition;
     }
   }
 

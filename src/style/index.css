@@ -361,16 +361,36 @@ section.hero p {
   padding-bottom: 0.5rem;
 }
 section.hero .btn {
+  overflow: hidden;
+  display: inline-flex;
+  position: relative;
   border-radius: 100vmax;
   background: #242424;
   color: #fff;
   font-weight: 500;
   transition: 0.15s;
-  display: inline-block;
+}
+section.hero .btn:hover .text {
+  transform: translateX(-2rem);
+}
+section.hero .btn:hover .hover-cont {
+  right: 0;
+}
+section.hero .btn .text {
+  transition: 0.15s;
   padding: 0.75rem 1.25rem;
 }
-section.hero .btn:hover {
+section.hero .btn .hover-cont {
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: 0;
+  right: -100%;
+  height: 100%;
+  aspect-ratio: 1/1;
   background: #434343;
+  transition: 0.15s;
 }
 section.hero .arrow-down {
   position: absolute;
