@@ -495,7 +495,7 @@ section.about ul li .progress-bar .progress {
 }
 section.about ul li .percentage, section.about ul li .progress {
   transition: 0.3s;
-  transition-delay: 0.3s;
+  transition-delay: 0.15s;
 }
 section.about ul li.toAnimate .percentage {
   left: 0 !important;

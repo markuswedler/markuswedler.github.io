@@ -80,7 +80,7 @@ section.about{
       // observer animation
       .percentage, .progress{
         transition: $transition*2;
-        transition-delay: $transition*2;
+        transition-delay: $transition;
       }
       &.toAnimate{
         .percentage{ left: 0 !important; }
