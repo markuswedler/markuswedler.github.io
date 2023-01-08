@@ -456,16 +456,6 @@ section.about ul {
 section.about ul li {
   position: relative;
 }
-section.about ul li .percentage, section.about ul li .progress {
-  transition: 0.3s;
-  transition-delay: 0.3s;
-}
-section.about ul li.toAnimate .percentage {
-  left: 0 !important;
-}
-section.about ul li.toAnimate .progress {
-  width: 0 !important;
-}
 section.about ul li .percentage {
   position: absolute;
   bottom: 0.8125rem;
@@ -497,6 +487,21 @@ section.about ul li .progress-bar .progress {
   border-top-left-radius: 100vmax;
   border-bottom-left-radius: 100vmax;
   height: 100%;
+}
+@media (prefers-reduced-motion) {
+  section.about ul li .percentage, section.about ul li .progress {
+    transition: 0;
+  }
+}
+section.about ul li .percentage, section.about ul li .progress {
+  transition: 0.3s;
+  transition-delay: 0.3s;
+}
+section.about ul li.toAnimate .percentage {
+  left: 0 !important;
+}
+section.about ul li.toAnimate .progress {
+  width: 0 !important;
 }
 
 section.works .works {

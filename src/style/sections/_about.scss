@@ -41,14 +41,6 @@ section.about{
     @media (max-width: 769px){ padding-top: 2.5rem; }
     li{
       position: relative;
-      .percentage, .progress{
-        transition: $transition*2;
-        transition-delay: $transition*2;
-      }
-      &.toAnimate{
-        .percentage{ left: 0 !important; }
-        .progress{ width: 0 !important; }
-      }
       .percentage{
         position: absolute;
         bottom: 0.8125rem;
@@ -80,6 +72,19 @@ section.about{
           border-bottom-left-radius: 100vmax;
           height: 100%;
         }
+      }
+      // transitions turned off
+      @media(prefers-reduced-motion){
+        .percentage, .progress{ transition: 0; }
+      }
+      // observer animation
+      .percentage, .progress{
+        transition: $transition*2;
+        transition-delay: $transition*2;
+      }
+      &.toAnimate{
+        .percentage{ left: 0 !important; }
+        .progress{ width: 0 !important; }
       }
     }
   }
