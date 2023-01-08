@@ -188,7 +188,7 @@ header .logo {
   }
   header ul li a div {
     white-space: nowrap;
-    background: linear-gradient(0deg, #242424, #242424) no-repeat bottom left/0 2px;
+    background: linear-gradient(0deg, #4d4d4d, #4d4d4d) no-repeat bottom left/0 2px;
     transition: 0.15s;
     padding: 0.5rem 0;
   }
@@ -357,8 +357,7 @@ section.hero .pfp {
   }
 }
 section.hero p {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding: 0.25rem 0 0.68rem;
 }
 section.hero .btn {
   overflow: hidden;
