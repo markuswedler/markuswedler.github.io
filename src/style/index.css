@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
 :root {
   --wrapper-padding: 24px;
 }
@@ -10,7 +11,7 @@
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", "Noto Sans JP", sans-serif;
 }
 
 ul {
@@ -177,15 +178,16 @@ header ul li {
 @media (min-width: 769px) {
   header ul li a {
     position: relative;
+    font-weight: 500;
     transition: 0.15s;
     padding: 0 0.9rem;
   }
   header ul li a:hover div {
-    background-size: 100% 0.1rem;
+    background-size: 100% 0.12rem;
   }
   header ul li a div {
     white-space: nowrap;
-    background: linear-gradient(0deg, #4d4d4d, #4d4d4d) no-repeat bottom left/0 2px;
+    background: linear-gradient(0deg, #4d4d4d, #4d4d4d) no-repeat bottom left/0 0.12rem;
     transition: 0.15s;
     padding: 0.5rem 0;
   }

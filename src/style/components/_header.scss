@@ -52,14 +52,15 @@
         a{
           @media (min-width: 769px){
             position: relative;
+            font-weight: 500;
             transition: $transition;
             padding: 0 .9rem;
             &:hover{
-              div{ background-size: 100% .1rem; }
+              div{ background-size: 100% .12rem; }
             }
             div{
               white-space: nowrap;
-              background: linear-gradient(0deg, $text, $text) no-repeat bottom left / 0 2px;
+              background: linear-gradient(0deg, $text, $text) no-repeat bottom left / 0 .12rem;
               transition: $transition;
               padding: .5rem 0;
             }
