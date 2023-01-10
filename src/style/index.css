@@ -377,6 +377,33 @@ section.hero .btn:hover .text {
 section.hero .btn:hover .hover-cont {
   left: 0;
 }
+section.hero .btn:hover .hover-cont ion-icon {
+  transform-origin: left bottom;
+  -webkit-animation: 0.3s jump ease-out;
+          animation: 0.3s jump ease-out;
+}
+@-webkit-keyframes jump {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(-7deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes jump {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(-7deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
 section.hero .btn .text {
   transition: 0.15s;
   padding: 0.75rem 1.25rem;

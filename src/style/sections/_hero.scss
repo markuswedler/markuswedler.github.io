@@ -45,6 +45,21 @@ section.hero{
       }
       .hover-cont{
         left: 0;
+        ion-icon{
+          @keyframes jump{
+            0%{
+              transform: rotate(0);
+            }
+            50%{
+              transform: rotate(-7deg);
+            }
+            100%{
+              transform: rotate(0);
+            }
+          }
+          transform-origin: left bottom;
+          animation: $transition*2 jump ease-out;
+        }
       }
     }
     .text{
