@@ -92,6 +92,9 @@
         height: 2.4px;
         background: $main;
         transition: $transition;
+        @media (forced-colors){
+          background: canvasText;
+        }
       }
       &::before{ margin-bottom: 6px; }
     }

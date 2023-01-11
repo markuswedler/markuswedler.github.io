@@ -155,6 +155,13 @@ header .logo {
   header ul li:not(:last-child) {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
+}
+@media (max-width: 769px) and (forced-colors) {
+  header ul {
+    outline: 1px solid transparent;
+  }
+}
+@media (max-width: 769px) {
   header ul li a {
     width: 100%;
     color: #fff;
@@ -220,6 +227,11 @@ header label::before, header label::after {
   background: #242424;
   transition: 0.15s;
 }
+@media (forced-colors) {
+  header label::before, header label::after {
+    background: canvasText;
+  }
+}
 header label::before {
   margin-bottom: 6px;
 }
@@ -280,6 +292,11 @@ footer .languages label span {
 footer .languages label img {
   width: 0.5rem;
 }
+@media (forced-colors) {
+  footer .languages label img {
+    background-color: canvasText;
+  }
+}
 footer .languages ul {
   background: #242424;
   border-radius: 0.32rem;
@@ -297,6 +314,11 @@ footer .languages ul {
 }
 footer .languages ul li:not(:last-child) {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+@media (forced-colors) {
+  footer .languages ul {
+    outline: 1px solid transparent;
+  }
 }
 footer .languages ul li {
   cursor: pointer;
@@ -324,6 +346,11 @@ footer .links {
 footer .links a {
   display: flex;
   align-items: center;
+}
+@media (forced-colors) {
+  footer .links a {
+    background-color: canvasText;
+  }
 }
 footer .links img {
   width: 1rem;
@@ -372,6 +399,11 @@ section.hero .btn {
   color: #fff;
   font-weight: 500;
   transition: 0.15s;
+}
+@media (forced-colors) {
+  section.hero .btn {
+    outline: 1px solid transparent;
+  }
 }
 section.hero .btn:hover .text {
   transform: translateX(-2rem);
@@ -422,6 +454,12 @@ section.hero .btn .hover-cont {
   border-radius: 100vmax;
   background: #3e3e3e;
   transition: 0.15s;
+}
+@media (forced-colors) {
+  section.hero .btn .hover-cont {
+    outline: 1px solid transparent;
+    left: calc(100% + 1px);
+  }
 }
 section.hero .btn .hover-cont ion-icon {
   font-size: 1.15rem;
@@ -501,6 +539,11 @@ section.about img {
   display: block;
   width: 6rem;
 }
+@media (forced-colors) {
+  section.about img {
+    background: canvasText;
+  }
+}
 section.about h2 {
   margin-top: 1.2rem;
   margin-bottom: 0.75rem;
@@ -542,6 +585,17 @@ section.about .skills li .percentage::after {
   border: 0.1875rem solid transparent;
   border-top-color: #242424;
 }
+@media (forced-colors) {
+  section.about .skills li .percentage::after {
+    border-color: canvas;
+    border-top-color: canvasText;
+  }
+}
+@media (forced-colors) {
+  section.about .skills li .percentage {
+    background: canvasText;
+  }
+}
 section.about .skills li .progress-bar {
   position: relative;
   height: 10px;
@@ -554,6 +608,11 @@ section.about .skills li .progress-bar .progress {
   border-top-left-radius: 100vmax;
   border-bottom-left-radius: 100vmax;
   height: 100%;
+}
+@media (forced-colors) {
+  section.about .skills li .progress-bar .progress {
+    background: canvasText;
+  }
 }
 @media (prefers-reduced-motion) {
   section.about .skills li .percentage, section.about .skills li .progress {
@@ -591,6 +650,11 @@ section.works .works a .img {
   background-size: contain;
   background-repeat: no-repeat;
   margin-bottom: auto;
+}
+@media (forced-colors) {
+  section.works .works a .img {
+    background-color: canvasText;
+  }
 }
 section.works .works a p {
   margin-top: 0.75rem;

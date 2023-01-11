@@ -23,6 +23,9 @@ section.works{
         background-size: contain;
         background-repeat: no-repeat;
         margin-bottom: auto;
+        @media (forced-colors){
+          background-color: canvasText;
+        }
       }
       p{
         margin-top: .75rem;

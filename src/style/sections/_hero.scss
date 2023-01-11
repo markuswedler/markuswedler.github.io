@@ -39,6 +39,9 @@ section.hero{
     color: #fff;
     font-weight: 500;
     transition: $transition;
+    @media (forced-colors){
+      outline: 1px solid transparent;
+    }
     &:hover{
       .text{
         transform: translateX(-2rem);
@@ -78,6 +81,10 @@ section.hero{
       border-radius: 100vmax;
       background: lighten($main, 10);
       transition: $transition;
+      @media (forced-colors){
+        outline: 1px solid transparent;
+        left: calc(100% + 1px);
+      }
       ion-icon{
         font-size: 1.15rem;
         --ionicon-stroke-width: 2.5rem;

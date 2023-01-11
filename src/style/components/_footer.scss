@@ -52,6 +52,9 @@ footer{
       }
       img{
         width: .5rem;
+        @media (forced-colors){
+          background-color: canvasText;
+        }
       }
     }
 
@@ -89,6 +92,9 @@ footer{
     a{
       display: flex;
       align-items: center;
+      @media (forced-colors){
+        background-color: canvasText;
+      }
     }
     img{
       width: 1rem;

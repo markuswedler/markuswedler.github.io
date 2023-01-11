@@ -30,6 +30,9 @@ section.about{
     pointer-events: none;
     display: block;
     width: 6rem;
+    @media (forced-colors){
+      background: canvasText;
+    }
   }
 
   h2{
@@ -64,6 +67,13 @@ section.about{
           transform: translate(-50%, 100%);
           border: 0.1875rem solid transparent;
           border-top-color: $main;
+          @media (forced-colors){
+            border-color: canvas;
+            border-top-color: canvasText;
+          }
+        }
+        @media (forced-colors){
+          background: canvasText;
         }
       }
       .progress-bar{
@@ -77,6 +87,9 @@ section.about{
           border-top-left-radius: 100vmax;
           border-bottom-left-radius: 100vmax;
           height: 100%;
+          @media (forced-colors){
+            background: canvasText;
+          }
         }
       }
       // transitions turned off

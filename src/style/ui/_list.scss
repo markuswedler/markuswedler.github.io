@@ -4,6 +4,9 @@
   transition: $transition;
   padding: .25rem .75rem;
   li:not(:last-child){ border-bottom: 1px solid rgb(#fff, .1); }
+  @media (forced-colors){
+    outline: 1px solid transparent;
+  }
 }
 
 @mixin list-li{
