@@ -36,9 +36,13 @@ section.about{
   }
 
   .skills{
+    @media (max-width: 769px){ padding-top: 2.5rem; }
     display: grid;
     gap: 1.25rem;
-    @media (max-width: 769px){ padding-top: 2.5rem; }
+    &.toAnimate{
+      .percentage{ left: 0 !important; }
+      .progress{ width: 0 !important; }
+    }
     li{
       position: relative;
       .percentage{
@@ -79,10 +83,6 @@ section.about{
       }
       // observer animation
       .percentage, .progress{ transition: $transition*2; }
-      &.toAnimate{
-        .percentage{ left: 0 !important; }
-        .progress{ width: 0 !important; }
-      }
     }
   }
 }

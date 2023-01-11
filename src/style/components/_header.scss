@@ -47,20 +47,6 @@
       li{
         @media (min-width: 769px){
           border-bottom: none;
-          &:last-child a{
-            background: $main;
-            color: #fff;
-            border-radius: 100vmax;
-            margin-left: .75rem;
-            &:hover{
-              background: lighten($main, 10);
-            }
-          }
-          &:not(:last-child) a{
-            &:hover{
-              div{ background-size: 100% .12rem; }
-            }
-          }
         }
         display: flex;
         a{
@@ -69,6 +55,9 @@
             font-weight: 500;
             transition: $transition;
             padding: 0 .9rem;
+            &:hover{
+              div{ background-size: 100% .12rem; }
+            }
             div{
               white-space: nowrap;
               background: linear-gradient(0deg, $text, $text) no-repeat bottom left / 0 .12rem;

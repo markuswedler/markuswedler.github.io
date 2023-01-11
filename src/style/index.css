@@ -174,18 +174,6 @@ header ul li {
   header ul li {
     border-bottom: none;
   }
-  header ul li:last-child a {
-    background: #242424;
-    color: #fff;
-    border-radius: 100vmax;
-    margin-left: 0.75rem;
-  }
-  header ul li:last-child a:hover {
-    background: #3e3e3e;
-  }
-  header ul li:not(:last-child) a:hover div {
-    background-size: 100% 0.12rem;
-  }
 }
 @media (min-width: 769px) {
   header ul li a {
@@ -193,6 +181,9 @@ header ul li {
     font-weight: 500;
     transition: 0.15s;
     padding: 0 0.9rem;
+  }
+  header ul li a:hover div {
+    background-size: 100% 0.12rem;
   }
   header ul li a div {
     white-space: nowrap;
@@ -518,6 +509,12 @@ section.about .skills {
     padding-top: 2.5rem;
   }
 }
+section.about .skills.toAnimate .percentage {
+  left: 0 !important;
+}
+section.about .skills.toAnimate .progress {
+  width: 0 !important;
+}
 section.about .skills li {
   position: relative;
 }
@@ -560,12 +557,6 @@ section.about .skills li .progress-bar .progress {
 }
 section.about .skills li .percentage, section.about .skills li .progress {
   transition: 0.3s;
-}
-section.about .skills li.toAnimate .percentage {
-  left: 0 !important;
-}
-section.about .skills li.toAnimate .progress {
-  width: 0 !important;
 }
 
 section.works .works {
