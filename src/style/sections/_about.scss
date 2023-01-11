@@ -26,6 +26,8 @@ section.about{
   }
 
   img{
+    user-select: none;
+    pointer-events: none;
     display: block;
     width: 6rem;
   }
